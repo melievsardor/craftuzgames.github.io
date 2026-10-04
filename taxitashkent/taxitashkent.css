@@ -1,0 +1,133 @@
+/* Taxi Tashkent – page theme. Load after ../style.css; it re-uses the shared classes
+   (.bar, .btn, .card, .features, .doc, footer) and only changes colours + adds page blocks. */
+:root {
+  --sky1: #3a5bd6;
+  --sky2: #2346b8;
+  --navy: #0e1a3a;
+  --gold: #fdc61a;
+  --teal: #f5a400;
+  --ink: #141b33;
+  --muted: #56607f;
+  --card: #ffffff;
+  --line: #e2e6f2;
+  --tint: #fff6d6;
+}
+body { background: #f6f7fb; }
+.bar { background: linear-gradient(90deg, #0b1330 0%, #1e3070 100%); }
+th, code { background: var(--tint); }
+.card { box-shadow: 0 8px 24px rgba(14, 26, 58, .12); }
+.card h3 { line-height: 1.3; }
+footer a { color: var(--sky2); }
+
+/* ---------- Landing page ---------- */
+.tt-hero {
+  color: #fff;
+  text-align: center;
+  padding: 44px 16px 100px;
+  background:
+    radial-gradient(circle at 85% 95%, rgba(253, 198, 26, .35) 0, rgba(253, 198, 26, 0) 45%),
+    radial-gradient(circle at 15% 5%, #3a5bd6 0, rgba(58, 91, 214, 0) 55%),
+    linear-gradient(165deg, #1e3070 0%, #0b1330 100%);
+}
+.tt-hero .app-icon {
+  width: 128px;
+  height: 128px;
+  border-radius: 30px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .45);
+}
+.tt-hero h1 { margin: 18px 0 0; font-size: clamp(2.3rem, 8vw, 3.4rem); line-height: 1.05; letter-spacing: .01em; }
+.tt-hero .tagline { margin: 8px 0 0; font-size: clamp(1.1rem, 4vw, 1.35rem); font-weight: 700; color: var(--gold); }
+.tt-hero .lead { max-width: 640px; margin: 14px auto 26px; font-size: 1.1rem; }
+.tt-hero .note { margin: 16px 0 0; font-size: .92rem; opacity: .85; }
+.tt-hero + .features { margin-top: -60px; }
+.shot { display: block; width: min(100%, 860px); margin: 0 auto; border-radius: 22px; box-shadow: 0 14px 34px rgba(14, 26, 58, .25); }
+.checker {
+  height: 14px;
+  max-width: 260px;
+  margin: 18px auto 0;
+  background: repeating-conic-gradient(#111 0 25%, var(--gold) 0 50%) 0 0 / 14px 14px;
+  border-radius: 3px;
+}
+
+.tile {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: var(--c, var(--sky2));
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.3rem;
+  line-height: 1;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, .18);
+}
+.tile.dark { color: var(--navy); }
+
+.section { max-width: 980px; margin: 0 auto; padding: 48px 16px 0; }
+.section > h2 { margin: 0 0 8px; color: var(--navy); font-size: clamp(1.5rem, 5vw, 2rem); line-height: 1.2; text-align: center; }
+.section > .sub { max-width: 660px; margin: 0 auto 24px; color: var(--muted); text-align: center; }
+.center { text-align: center; }
+
+/* English block */
+.en-box {
+  background: var(--card);
+  border-radius: 24px;
+  border-top: 6px solid var(--gold);
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(14, 26, 58, .12);
+}
+.en-box h2 { margin: 0 0 8px; color: var(--navy); line-height: 1.25; font-size: clamp(1.35rem, 4.5vw, 1.7rem); }
+.checks { padding: 0; margin: 16px 0 24px; list-style: none; }
+.checks li { position: relative; padding-left: 30px; margin: 8px 0; }
+.checks li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: .5em;
+  width: 12px;
+  height: 7px;
+  border-left: 3px solid var(--teal);
+  border-bottom: 3px solid var(--teal);
+  transform: rotate(-45deg);
+}
+
+/* ---------- Footer ---------- */
+.foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-bottom: 8px; }
+
+/* ---------- Policy pages ---------- */
+.lang-switch {
+  display: inline-flex;
+  margin: 4px 0 8px;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--tint);
+  font-weight: 700;
+}
+.lang-switch a { padding: 4px 14px; border-radius: 999px; text-decoration: none; }
+.lang-switch a:hover { background: #fff; }
+.lang-switch span { align-self: center; color: #c9b36a; font-weight: 400; }
+.lang-sep { margin: 48px 0 8px; border: 0; border-top: 3px dashed var(--line); }
+.to-top { margin-top: 24px; font-size: .95rem; }
+.doc h1, .doc h2, .doc h3 { line-height: 1.25; }
+.doc h3 { color: var(--navy); margin-bottom: 4px; }
+.box {
+  background: var(--card);
+  border-left: 5px solid var(--gold);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  box-shadow: 0 4px 14px rgba(14, 26, 58, .08);
+}
+.box p { margin: 6px 0; }
+.steps li { margin: 6px 0; }
+
+/* Partner tables become stacked cards on narrow screens */
+@media (max-width: 640px) {
+  table.stack, table.stack tbody, table.stack tr, table.stack td { display: block; width: 100%; }
+  table.stack tr:first-child { display: none; }
+  table.stack tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  table.stack td { border: 0; padding: 2px 4px; }
+  table.stack td:first-child { font-weight: 700; color: var(--navy); }
+}

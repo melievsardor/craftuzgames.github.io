@@ -65,6 +65,9 @@ footer a { color: var(--sky2); }
 .to-top { margin-top: 24px; font-size: .95rem; }
 .doc h1, .doc h2, .doc h3 { line-height: 1.25; }
 .doc h3 { color: var(--navy); margin-bottom: 4px; }
+.box { background: var(--card); border-left: 5px solid var(--gold); border-radius: 12px; padding: 12px 16px; margin: 16px 0; box-shadow: 0 4px 14px rgba(29, 59, 35, .08); }
+.box p { margin: 6px 0; }
+.steps li { margin: 6px 0; }
 
 /* Partner tables become stacked cards on narrow screens */
 @media (max-width: 640px) {

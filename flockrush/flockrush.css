@@ -1,0 +1,76 @@
+/* Flock Rush – page theme. Load after ../style.css; it re-uses the shared classes
+   (.bar, .btn, .card, .features, .doc, footer) and only changes colours + adds page blocks. */
+:root {
+  --sky1: #5ab2ff;
+  --sky2: #2f8f3a;
+  --navy: #1d3b23;
+  --gold: #ff9f1c;
+  --pink: #ff7eb6;
+  --ink: #1f2a22;
+  --muted: #59655b;
+  --card: #ffffff;
+  --line: #e2eedf;
+  --tint: #fff1dc;
+}
+body { background: #f4faf1; }
+.bar { background: linear-gradient(90deg, #1d3b23 0%, #2f8f3a 100%); }
+th, code { background: var(--tint); }
+.card { box-shadow: 0 8px 24px rgba(29, 59, 35, .12); }
+.card h3 { line-height: 1.3; }
+footer a { color: var(--sky2); }
+.btn { background: var(--gold); box-shadow: 0 6px 0 #d97a00, 0 12px 20px rgba(0, 0, 0, .2); }
+
+/* ---------- Landing page ---------- */
+.fr-hero {
+  color: #fff;
+  text-align: center;
+  padding: 44px 16px 100px;
+  background:
+    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, .45) 0, rgba(255, 255, 255, 0) 40%),
+    linear-gradient(180deg, #3aa0f0 0%, #7cc8ff 55%, #78c850 56%, #4fa83a 100%);
+}
+.fr-hero .app-icon { width: 128px; height: 128px; border-radius: 30px; box-shadow: 0 14px 30px rgba(0, 0, 0, .35); }
+.fr-hero h1 { margin: 18px 0 0; font-size: clamp(2.3rem, 8vw, 3.4rem); line-height: 1.05; text-shadow: 0 3px 0 rgba(0, 0, 0, .25); }
+.fr-hero .tagline { margin: 8px 0 0; font-size: clamp(1.1rem, 4vw, 1.35rem); font-weight: 700; color: #fff6c9; text-shadow: 0 2px 4px rgba(0, 0, 0, .3); }
+.fr-hero .lead { max-width: 640px; margin: 14px auto 26px; font-size: 1.1rem; text-shadow: 0 2px 6px rgba(0, 0, 0, .35); }
+.fr-hero .note { margin: 16px 0 0; font-size: .92rem; opacity: .95; text-shadow: 0 1px 3px rgba(0, 0, 0, .35); }
+.fr-hero + .features { margin-top: -60px; }
+.shot { display: block; width: min(100%, 860px); margin: 0 auto; border-radius: 22px; box-shadow: 0 14px 34px rgba(29, 59, 35, .25); }
+.tile {
+  display: inline-grid; place-items: center; width: 44px; height: 44px; margin-bottom: 10px; border-radius: 12px;
+  background: var(--c, var(--sky2)); color: #fff; font-weight: 800; font-size: 1.3rem; line-height: 1;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, .18);
+}
+.section { max-width: 980px; margin: 0 auto; padding: 48px 16px 0; }
+.section > h2 { margin: 0 0 8px; color: var(--navy); font-size: clamp(1.5rem, 5vw, 2rem); line-height: 1.2; text-align: center; }
+.section > .sub { max-width: 660px; margin: 0 auto 24px; color: var(--muted); text-align: center; }
+.en-box { background: var(--card); border-radius: 24px; border-top: 6px solid var(--gold); padding: 24px; box-shadow: 0 8px 24px rgba(29, 59, 35, .12); }
+.en-box h2 { margin: 0 0 8px; color: var(--navy); line-height: 1.25; font-size: clamp(1.35rem, 4.5vw, 1.7rem); }
+.checks { padding: 0; margin: 16px 0 24px; list-style: none; }
+.checks li { position: relative; padding-left: 30px; margin: 8px 0; }
+.checks li::before {
+  content: ""; position: absolute; left: 4px; top: .5em; width: 12px; height: 7px;
+  border-left: 3px solid var(--sky2); border-bottom: 3px solid var(--sky2); transform: rotate(-45deg);
+}
+
+/* ---------- Footer ---------- */
+.foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-bottom: 8px; }
+
+/* ---------- Policy pages ---------- */
+.lang-switch { display: inline-flex; margin: 4px 0 8px; padding: 4px; border-radius: 999px; background: var(--tint); font-weight: 700; }
+.lang-switch a { padding: 4px 14px; border-radius: 999px; text-decoration: none; }
+.lang-switch a:hover { background: #fff; }
+.lang-switch span { align-self: center; color: #d0a868; font-weight: 400; }
+.lang-sep { margin: 48px 0 8px; border: 0; border-top: 3px dashed var(--line); }
+.to-top { margin-top: 24px; font-size: .95rem; }
+.doc h1, .doc h2, .doc h3 { line-height: 1.25; }
+.doc h3 { color: var(--navy); margin-bottom: 4px; }
+
+/* Partner tables become stacked cards on narrow screens */
+@media (max-width: 640px) {
+  table.stack, table.stack tbody, table.stack tr, table.stack td { display: block; width: 100%; }
+  table.stack tr:first-child { display: none; }
+  table.stack tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  table.stack td { border: 0; padding: 2px 4px; }
+  table.stack td:first-child { font-weight: 700; color: var(--navy); }
+}

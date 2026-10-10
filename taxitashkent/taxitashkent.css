@@ -131,3 +131,8 @@ footer a { color: var(--sky2); }
   table.stack td { border: 0; padding: 2px 4px; }
   table.stack td:first-child { font-weight: 700; color: var(--navy); }
 }
+
+/* Screenshot gallery */
+.gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.gallery img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 10px 26px rgba(14, 26, 58, .22); }
+@media (max-width: 640px) { .gallery { grid-template-columns: 1fr; } }

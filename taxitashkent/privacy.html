@@ -25,18 +25,18 @@
 <!-- ============================== ENGLISH ============================== -->
 <article id="en">
 <h1>Privacy Policy</h1>
-<p class="muted">Effective date: 6 October 2026</p>
+<p class="muted">Effective date: 14 October 2026</p>
 
-<p>This Privacy Policy explains how <b>CraftUz</b> ("we", "us") handles information in the mobile game <b>Taxi Tashkent</b> (package <code>com.craftuz.taxitashkent</code>, the "Game"), distributed for Android through Google Play. If you have any questions, contact us at <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a>.</p>
+<p>This Privacy Policy explains how <b>CraftUz</b> ("we", "us") handles information in the mobile game <b>Taxi Tashkent</b> (package <code>com.craftuz.taxitashkent</code>, the "Game"), distributed for Android through Google Play and for iPhone through the App Store. If you have any questions, contact us at <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a>.</p>
 
 <h2>1. Summary</h2>
 <ul>
-<li>You can play without registering: on first launch the Game creates an anonymous guest account (a random player ID). You can optionally link your Google account to keep your progress when you change phones.</li>
+<li>You can play without registering: on first launch the Game creates an anonymous guest account (a random player ID). You can optionally link your Google account (Android) or your Apple ID with Sign in with Apple (iPhone) to keep your progress when you change phones.</li>
 <li>Your progress (money, cars, missions, driving-licence progress, settings and your driver) is saved on your device and in our cloud storage, which is operated for us by Unity Gaming Services.</li>
 <li>Leaderboards show your driver's name and number of trips to other players.</li>
-<li>The Game shows ads and offers optional in-app purchases. Our advertising and measurement partners (Google and Meta) automatically collect some device data, such as the advertising ID, as described below.</li>
+<li>The Game shows ads and offers optional in-app purchases. Our advertising and measurement partners (Google and, on Android, Meta) automatically collect some device data, such as the advertising ID, as described below. On iPhone the advertising identifier (IDFA) is used only if you allow tracking when Apple’s App Tracking Transparency prompt asks.</li>
 <li>In the EEA, the UK and Switzerland we ask for your consent before personalised ads are shown. You can change your choice at any time in the Game's <b>Settings → “Reklama roziligi (GDPR)”</b>.</li>
-<li>Anonymous gameplay statistics are sent only if you agree. You can change this at any time in <b>HISOB (Account) → “Anonim statistika”</b>.</li>
+<li>Anonymous gameplay statistics are sent only if you agree (Android version; the iPhone version sends none). You can change this at any time in <b>HISOB (Account) → “Anonim statistika”</b>.</li>
 <li>The Game does not use your precise location (GPS), contacts, camera, microphone or files.</li>
 </ul>
 
@@ -45,6 +45,7 @@
 <ul>
 <li><b>Player ID</b> – a random identifier created by Unity Authentication when you first play. It links your cloud save and leaderboard entries.</li>
 <li><b>Google account (optional)</b> – if you tap “Google bilan bog‘lash” (Link with Google), Android's Credential Manager lets you choose an account and gives the Game a Google sign-in token. Unity Authentication verifies it and links your Google account ID to your player ID. We keep your Google display name and e-mail address on your device only to show which account is linked. We never see your Google password.</li>
+<li><b>Apple ID (optional, iPhone)</b> – if you tap “Sign in with Apple” on the account page, Apple asks you to confirm and gives the Game a sign-in token. Unity Authentication verifies it and links your Apple user identifier to your player ID. If you choose to share your name or e-mail address (which can be Apple’s private relay address), Apple sends them only the first time; we keep them on your device only to show which account is linked. We never see your Apple ID password. You can stop using Sign in with Apple for the Game at any time in iPhone <i>Settings → [your name] → Sign in with Apple</i>.</li>
 </ul>
 
 <h3>2.2 Game data</h3>
@@ -58,16 +59,16 @@
 <p>The weekly and all-time leaderboards (Unity Leaderboards) show your driver name, your number of trips and your car to other players. To keep the boards fair, our server checks that the number of trips is plausible.</p>
 
 <h3>2.4 Anonymous statistics (only with your consent)</h3>
-<p>If you agree, Google Analytics for Firebase receives gameplay events (for example sessions, completed trips, pages opened, purchases, how smoothly the Game runs on your phone such as frame rate and loading time, errors) together with device information (phone model, Android version, country / region, an app-instance ID and, where allowed, the advertising ID). Until you answer the privacy question nothing is sent. You can withdraw your consent at any time in <b>HISOB → “Anonim statistika”</b>; the Game then stops sending events. Deleting your account (section 5) also resets the analytics ID on your device. Google keeps this data for a limited time (at most 14 months).</p>
+<p>If you agree, Google Analytics for Firebase receives gameplay events (for example sessions, completed trips, pages opened, purchases, how smoothly the Game runs on your phone such as frame rate and loading time, errors) together with device information (phone model, Android version, country / region, an app-instance ID and, where allowed, the advertising ID). Until you answer the privacy question nothing is sent. You can withdraw your consent at any time in <b>HISOB → “Anonim statistika”</b>; the Game then stops sending events. Deleting your account (section 5) also resets the analytics ID on your device. Google keeps this data for a limited time (at most 14 months). This applies to the Android version only: the iPhone version does not include Firebase and sends no gameplay statistics.</p>
 
 <h3>2.5 Information collected automatically by partners (SDKs)</h3>
 <p>The Game uses third-party software development kits (SDKs). When you play, these SDKs may automatically collect and process:</p>
 <ul>
-<li><b>Device or other identifiers</b> – advertising ID (Google Advertising ID), app set ID, installation ID, IP address;</li>
+<li><b>Device or other identifiers</b> – advertising ID (Google Advertising ID on Android; Apple’s IDFA on iPhone, only if you allow tracking), app set ID / identifier for vendors (IDFV), installation ID, IP address;</li>
 <li><b>Approximate location</b> – country or region derived from the IP address;</li>
 <li><b>Device information</b> – device model, operating system version, language, screen size, network type;</li>
 <li><b>App interactions</b> – app installs and launches, ad views and ad clicks;</li>
-<li><b>Purchase history</b> – in-app purchases made through Google Play (we never see your payment card details);</li>
+<li><b>Purchase history</b> – in-app purchases made through Google Play or the App Store (we never see your payment card details);</li>
 <li><b>Diagnostics</b> – crash logs and performance data.</li>
 </ul>
 
@@ -85,12 +86,14 @@
 <table class="stack">
 <tr><th>Partner</th><th>Purpose and data</th><th>Privacy policy</th></tr>
 <tr><td>Unity Gaming Services (Authentication, Cloud Save, Cloud Code, Remote Config, Leaderboards)</td><td>Guest account and optional Google account link, cloud save of your progress and driver portrait, live events and gifts, leaderboards. Processes the player ID, game data, driver name, linked Google account ID, IP address and device information on our behalf.</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Privacy Policy</a></td></tr>
-<tr><td>Google Analytics for Firebase (Google LLC)</td><td>Gameplay statistics and how the Game performs on phones – only with your consent. Processes an app-instance ID, the advertising ID where allowed, device information, approximate location derived from the IP address and in-game events.</td><td><a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a></td></tr>
+<tr><td>Google Analytics for Firebase (Google LLC) – Android only</td><td>Gameplay statistics and how the Game performs on phones – only with your consent. Processes an app-instance ID, the advertising ID where allowed, device information, approximate location derived from the IP address and in-game events.</td><td><a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a></td></tr>
 <tr><td>Google Sign-In (Android Credential Manager)</td><td>Optional sign-in with your Google account to link it to your progress.</td><td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+<tr><td>Sign in with Apple (Apple Inc.) – iPhone</td><td>Optional sign-in with your Apple ID to link it to your progress.</td><td><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></td></tr>
 <tr><td>Google AdMob (Google Mobile Ads SDK)</td><td>Interstitial, rewarded and banner ads, ad measurement and fraud prevention. Collects the advertising ID, app set ID, IP address / approximate location, device information, ad interactions and diagnostics.</td><td><a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a></td></tr>
 <tr><td>Google User Messaging Platform (UMP)</td><td>Showing the consent form to users in the EEA, the UK and Switzerland and storing their privacy choices.</td><td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
-<tr><td>Meta Platforms (Facebook SDK, App Events only)</td><td>Measuring our own ad campaigns: app installs and launches. The advertising ID is collected only if you have given consent (in regions where consent is required). There is no Facebook login in the Game.</td><td><a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a></td></tr>
+<tr><td>Meta Platforms (Facebook SDK, App Events only) – Android only</td><td>Measuring our own ad campaigns: app installs and launches. The advertising ID is collected only if you have given consent (in regions where consent is required). There is no Facebook login in the Game.</td><td><a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a></td></tr>
 <tr><td>Google Play Billing</td><td>Processing and restoring in-app purchases. We never see your payment card details.</td><td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+<tr><td>Apple App Store (In-App Purchase) – iPhone</td><td>Processing and restoring in-app purchases on iPhone. We never see your payment card details.</td><td><a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a></td></tr>
 <tr><td>Unity Technologies (Unity engine)</td><td>Game engine; may send anonymous crash reports.</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Privacy Policy</a></td></tr>
 </table>
 <p>The map of the Game is built from OpenStreetMap data (© OpenStreetMap contributors); no data about you is sent to OpenStreetMap. Each partner processes data under its own privacy policy. If we add new partners, we will update this list. <b>We do not sell your personal information for money.</b></p>
@@ -99,7 +102,7 @@
 <ul>
 <li><b>Ad consent (EEA, UK, Switzerland):</b> a consent form provided by Google's User Messaging Platform is shown on first launch. You can change or withdraw your choice at any time in the Game's <b>Settings → “Reklama roziligi (GDPR)”</b> (this item appears where the law requires it). If you do not consent, you may still see non-personalised or limited ads.</li>
 <li><b>Anonymous statistics:</b> turn them on or off in <b>HISOB → “Anonim statistika”</b>.</li>
-<li><b>Personalised ads:</b> on Android you can reset or delete your advertising ID in <i>Settings → Google → Ads</i> (or <i>Settings → Privacy → Ads</i>).</li>
+<li><b>Personalised ads:</b> on Android you can reset or delete your advertising ID in <i>Settings → Google → Ads</i> (or <i>Settings → Privacy → Ads</i>). On iPhone the Game asks once whether it may track you (App Tracking Transparency); you can change the answer at any time in <i>Settings → Privacy &amp; Security → Tracking</i>. If you do not allow tracking, the IDFA is not used and you still see non-personalised ads.</li>
 <li><b>No ads:</b> the optional “Reklamasiz” purchase and VIP remove interstitial and banner ads.</li>
 <li><b>US state privacy rights:</b> residents of California and other US states can opt out of the "sale" or "sharing" of personal information for targeted advertising by deleting the advertising ID as above, through the privacy options in the Game's Settings where they are shown, or by contacting us.</li>
 <li><b>Access, correction and deletion:</b> you can delete your account and all its cloud data yourself in the Game: <b>HISOB → “Akkauntni o‘chirish”</b>. You can also ask us by e-mail. Step-by-step instructions: <a href="delete-data.html">Delete your account and data</a>.</li>
@@ -127,18 +130,18 @@
 <!-- ============================== O‘ZBEKCHA ============================== -->
 <article id="uz" lang="uz">
 <h1>Maxfiylik siyosati</h1>
-<p class="muted">Kuchga kirish sanasi: 2026-yil 6-oktabr</p>
+<p class="muted">Kuchga kirish sanasi: 2026-yil 14-oktabr</p>
 
-<p>Ushbu Maxfiylik siyosati <b>CraftUz</b> («biz») <b>Taxi Tashkent</b> mobil o‘yinida (paket nomi <code>com.craftuz.taxitashkent</code>, keyingi o‘rinlarda — «O‘yin») ma’lumotlar bilan qanday ishlashini tushuntiradi. O‘yin Google Play orqali Android qurilmalari uchun tarqatiladi. Savollaringiz bo‘lsa, biz bilan bog‘laning: <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a>.</p>
+<p>Ushbu Maxfiylik siyosati <b>CraftUz</b> («biz») <b>Taxi Tashkent</b> mobil o‘yinida (paket nomi <code>com.craftuz.taxitashkent</code>, keyingi o‘rinlarda — «O‘yin») ma’lumotlar bilan qanday ishlashini tushuntiradi. O‘yin Google Play orqali Android qurilmalari uchun va App Store orqali iPhone uchun tarqatiladi. Savollaringiz bo‘lsa, biz bilan bog‘laning: <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a>.</p>
 
 <h2>1. Qisqacha</h2>
 <ul>
-<li>O‘ynash uchun ro‘yxatdan o‘tish shart emas: birinchi ishga tushirishda O‘yin anonim mehmon hisobini (tasodifiy o‘yinchi ID) yaratadi. Telefon almashtirganda natijalaringiz saqlanib qolishi uchun ixtiyoriy ravishda Google hisobingizni bog‘lashingiz mumkin.</li>
+<li>O‘ynash uchun ro‘yxatdan o‘tish shart emas: birinchi ishga tushirishda O‘yin anonim mehmon hisobini (tasodifiy o‘yinchi ID) yaratadi. Telefon almashtirganda natijalaringiz saqlanib qolishi uchun ixtiyoriy ravishda Google hisobingizni (Android) yoki Apple ID’ingizni «Sign in with Apple» orqali (iPhone) bog‘lashingiz mumkin.</li>
 <li>Natijalaringiz (pul, mashinalar, vazifalar, haydovchilik guvohnomasi bo‘yicha natijalar, sozlamalar va haydovchingiz) qurilmangizda hamda biz uchun Unity Gaming Services yuritadigan bulutli xotirada saqlanadi.</li>
 <li>Reyting jadvallarida haydovchingiz ismi va safarlar soni boshqa o‘yinchilarga ko‘rinadi.</li>
-<li>O‘yinda reklama ko‘rsatiladi va ixtiyoriy xaridlar mavjud. Reklama va tahlil bo‘yicha hamkorlarimiz (Google va Meta) quyida tavsiflanganidek, qurilmaga oid ayrim ma’lumotlarni (masalan, reklama identifikatorini) avtomatik ravishda to‘playdi.</li>
+<li>O‘yinda reklama ko‘rsatiladi va ixtiyoriy xaridlar mavjud. Reklama va tahlil bo‘yicha hamkorlarimiz (Google va Android’da Meta) quyida tavsiflanganidek, qurilmaga oid ayrim ma’lumotlarni (masalan, reklama identifikatorini) avtomatik ravishda to‘playdi. iPhone’da reklama identifikatori (IDFA) faqat Apple’ning App Tracking Transparency so‘rovida kuzatishga ruxsat bersangiz ishlatiladi.</li>
 <li>Yevropa iqtisodiy hududi (YIH), Buyuk Britaniya va Shveytsariyada shaxsiylashtirilgan reklama ko‘rsatishdan oldin roziligingizni so‘raymiz. Tanlovingizni istalgan vaqtda O‘yindagi <b>Sozlamalar → «Reklama roziligi (GDPR)»</b> bandida o‘zgartirishingiz mumkin.</li>
-<li>Anonim o‘yin statistikasi faqat roziligingiz bilan yuboriladi. Buni istalgan vaqtda <b>HISOB → «Anonim statistika»</b> bandida o‘zgartirasiz.</li>
+<li>Anonim o‘yin statistikasi faqat roziligingiz bilan yuboriladi (Android versiyasi; iPhone versiyasi statistika yubormaydi). Buni istalgan vaqtda <b>HISOB → «Anonim statistika»</b> bandida o‘zgartirasiz.</li>
 <li>O‘yin aniq joylashuvingiz (GPS), kontaktlar, kamera, mikrofon yoki fayllaringizdan foydalanmaydi.</li>
 </ul>
 
@@ -147,6 +150,7 @@
 <ul>
 <li><b>O‘yinchi ID</b> – birinchi o‘yinda Unity Authentication yaratadigan tasodifiy identifikator. U bulutdagi saqlanmangiz va reytingdagi yozuvlaringizni bog‘laydi.</li>
 <li><b>Google hisobi (ixtiyoriy)</b> – «Google bilan bog‘lash» tugmasini bossangiz, Android Credential Manager hisobni tanlashga imkon beradi va O‘yinga Google kirish tokenini beradi. Unity Authentication uni tekshiradi va Google hisobingiz identifikatorini o‘yinchi ID’ingizga bog‘laydi. Google’dagi ismingiz va e-pochta manzilingizni faqat qaysi hisob bog‘langanini ko‘rsatish uchun qurilmangizda saqlaymiz. Google parolingizni hech qachon ko‘rmaymiz.</li>
+<li><b>Apple ID (ixtiyoriy, iPhone)</b> – hisob sahifasida «Sign in with Apple» tugmasini bossangiz, Apple tasdiqlashni so‘raydi va O‘yinga kirish tokenini beradi. Unity Authentication uni tekshiradi va Apple foydalanuvchi identifikatoringizni o‘yinchi ID’ingizga bog‘laydi. Ismingiz yoki e-pochta manzilingizni (bu Apple’ning yashirin «private relay» manzili bo‘lishi mumkin) ulashishni tanlasangiz, Apple ularni faqat birinchi marta yuboradi; biz ularni faqat qaysi hisob bog‘langanini ko‘rsatish uchun qurilmangizda saqlaymiz. Apple ID parolingizni hech qachon ko‘rmaymiz. O‘yin uchun «Sign in with Apple»dan istalgan vaqtda iPhone’dagi <i>Sozlamalar → [ismingiz] → Sign in with Apple</i> bo‘limida voz kechishingiz mumkin.</li>
 </ul>
 
 <h3>2.2 O‘yin ma’lumotlari</h3>
@@ -160,16 +164,16 @@
 <p>Haftalik va umumiy reyting jadvallari (Unity Leaderboards) haydovchingiz ismi, safarlar soni va mashinangizni boshqa o‘yinchilarga ko‘rsatadi. Jadvallar adolatli bo‘lishi uchun serverimiz safarlar soni haqiqatga mosligini tekshiradi.</p>
 
 <h3>2.4 Anonim statistika (faqat roziligingiz bilan)</h3>
-<p>Rozi bo‘lsangiz, Google Analytics for Firebase o‘yin hodisalarini (masalan, seanslar, yakunlangan safarlar, ochilgan sahifalar, xaridlar, o‘yinning telefoningizda qanchalik silliq ishlashi – kadrlar tezligi va yuklanish vaqti, xatoliklar) qurilma haqidagi ma’lumotlar (telefon modeli, Android versiyasi, mamlakat / hudud, ilova nusxasi ID’si va ruxsat berilgan joyda reklama identifikatori) bilan birga oladi. Maxfiylik savoliga javob bermaguningizcha hech narsa yuborilmaydi. Roziligingizni istalgan vaqtda <b>HISOB → «Anonim statistika»</b> bandida qaytarib olishingiz mumkin; shunda O‘yin hodisalarni yubormaydi. Hisobni o‘chirish (5-bo‘lim) qurilmangizdagi analitika identifikatorini ham yangilaydi. Google bu ma’lumotlarni cheklangan muddat (ko‘pi bilan 14 oy) saqlaydi.</p>
+<p>Rozi bo‘lsangiz, Google Analytics for Firebase o‘yin hodisalarini (masalan, seanslar, yakunlangan safarlar, ochilgan sahifalar, xaridlar, o‘yinning telefoningizda qanchalik silliq ishlashi – kadrlar tezligi va yuklanish vaqti, xatoliklar) qurilma haqidagi ma’lumotlar (telefon modeli, Android versiyasi, mamlakat / hudud, ilova nusxasi ID’si va ruxsat berilgan joyda reklama identifikatori) bilan birga oladi. Maxfiylik savoliga javob bermaguningizcha hech narsa yuborilmaydi. Roziligingizni istalgan vaqtda <b>HISOB → «Anonim statistika»</b> bandida qaytarib olishingiz mumkin; shunda O‘yin hodisalarni yubormaydi. Hisobni o‘chirish (5-bo‘lim) qurilmangizdagi analitika identifikatorini ham yangilaydi. Google bu ma’lumotlarni cheklangan muddat (ko‘pi bilan 14 oy) saqlaydi. Bu faqat Android versiyasiga tegishli: iPhone versiyasida Firebase yo‘q va o‘yin statistikasi yuborilmaydi.</p>
 
 <h3>2.5 Hamkorlar (SDK) avtomatik to‘playdigan ma’lumotlar</h3>
 <p>O‘yinda uchinchi tomon dasturiy ta’minot to‘plamlari (SDK) ishlatiladi. O‘ynaganingizda bu SDK’lar quyidagilarni avtomatik to‘plashi va qayta ishlashi mumkin:</p>
 <ul>
-<li><b>Qurilma va boshqa identifikatorlar</b> – reklama identifikatori (Google Advertising ID), ilovalar to‘plami ID’si, o‘rnatish ID’si, IP manzil;</li>
+<li><b>Qurilma va boshqa identifikatorlar</b> – reklama identifikatori (Android’da Google Advertising ID; iPhone’da Apple IDFA, faqat kuzatishga ruxsat bersangiz), ilovalar to‘plami ID’si / ishlab chiquvchi identifikatori (IDFV), o‘rnatish ID’si, IP manzil;</li>
 <li><b>Taxminiy joylashuv</b> – IP manzil asosida aniqlanadigan mamlakat yoki hudud;</li>
 <li><b>Qurilma haqida ma’lumot</b> – qurilma modeli, operatsion tizim versiyasi, til, ekran o‘lchami, tarmoq turi;</li>
 <li><b>Ilovadagi harakatlar</b> – o‘rnatish va ishga tushirishlar, reklamani ko‘rish va bosishlar;</li>
-<li><b>Xaridlar tarixi</b> – Google Play orqali qilingan xaridlar (bank kartangiz ma’lumotlarini hech qachon ko‘rmaymiz);</li>
+<li><b>Xaridlar tarixi</b> – Google Play yoki App Store orqali qilingan xaridlar (bank kartangiz ma’lumotlarini hech qachon ko‘rmaymiz);</li>
 <li><b>Diagnostika</b> – nosozliklar qaydlari va unumdorlik ma’lumotlari.</li>
 </ul>
 
@@ -187,12 +191,14 @@
 <table class="stack">
 <tr><th>Hamkor</th><th>Maqsad va ma’lumotlar</th><th>Maxfiylik siyosati</th></tr>
 <tr><td>Unity Gaming Services (Authentication, Cloud Save, Cloud Code, Remote Config, Leaderboards)</td><td>Mehmon hisobi va ixtiyoriy Google hisobini bog‘lash, natijalaringiz va haydovchi portretini bulutda saqlash, jonli tadbirlar va sovg‘alar, reyting jadvallari. Biz nomimizdan o‘yinchi ID, o‘yin ma’lumotlari, haydovchi ismi, bog‘langan Google hisobi ID’si, IP manzil va qurilma ma’lumotlarini qayta ishlaydi.</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity maxfiylik siyosati</a></td></tr>
-<tr><td>Google Analytics for Firebase (Google LLC)</td><td>O‘yin statistikasi va o‘yinning telefonlarda ishlashi – faqat roziligingiz bilan. Ilova nusxasi ID’si, ruxsat berilgan joyda reklama identifikatori, qurilma ma’lumotlari, IP manzildan aniqlangan taxminiy joylashuv va o‘yin hodisalarini qayta ishlaydi.</td><td><a href="https://firebase.google.com/support/privacy">Firebase maxfiylik va xavfsizligi</a></td></tr>
+<tr><td>Google Analytics for Firebase (Google LLC) – faqat Android</td><td>O‘yin statistikasi va o‘yinning telefonlarda ishlashi – faqat roziligingiz bilan. Ilova nusxasi ID’si, ruxsat berilgan joyda reklama identifikatori, qurilma ma’lumotlari, IP manzildan aniqlangan taxminiy joylashuv va o‘yin hodisalarini qayta ishlaydi.</td><td><a href="https://firebase.google.com/support/privacy">Firebase maxfiylik va xavfsizligi</a></td></tr>
 <tr><td>Google bilan kirish (Android Credential Manager)</td><td>Google hisobingizni natijalaringizga bog‘lash uchun ixtiyoriy kirish.</td><td><a href="https://policies.google.com/privacy">Google maxfiylik siyosati</a></td></tr>
+<tr><td>Sign in with Apple (Apple Inc.) – iPhone</td><td>Apple ID’ingizni natijalaringizga bog‘lash uchun ixtiyoriy kirish.</td><td><a href="https://www.apple.com/legal/privacy/">Apple maxfiylik siyosati</a></td></tr>
 <tr><td>Google AdMob (Google Mobile Ads SDK)</td><td>To‘liq ekranli, mukofotli va banner reklamalar, reklamani o‘lchash va firibgarlikning oldini olish. Reklama identifikatori, ilovalar to‘plami ID’si, IP manzil / taxminiy joylashuv, qurilma ma’lumotlari, reklama bilan harakatlar va diagnostikani to‘playdi.</td><td><a href="https://policies.google.com/technologies/partner-sites">Google o‘z xizmatlaridan foydalanadigan ilovalardagi ma’lumotlardan qanday foydalanadi</a></td></tr>
 <tr><td>Google User Messaging Platform (UMP)</td><td>YIH, Buyuk Britaniya va Shveytsariyadagi foydalanuvchilarga rozilik oynasini ko‘rsatish va ularning tanlovini saqlash.</td><td><a href="https://policies.google.com/privacy">Google maxfiylik siyosati</a></td></tr>
-<tr><td>Meta Platforms (Facebook SDK, faqat App Events)</td><td>O‘z reklama kampaniyalarimizni o‘lchash: o‘rnatish va ishga tushirishlar. Reklama identifikatori faqat roziligingiz bilan to‘planadi (rozilik talab qilinadigan hududlarda). O‘yinda Facebook orqali kirish yo‘q.</td><td><a href="https://www.facebook.com/privacy/policy/">Meta maxfiylik siyosati</a></td></tr>
+<tr><td>Meta Platforms (Facebook SDK, faqat App Events) – faqat Android</td><td>O‘z reklama kampaniyalarimizni o‘lchash: o‘rnatish va ishga tushirishlar. Reklama identifikatori faqat roziligingiz bilan to‘planadi (rozilik talab qilinadigan hududlarda). O‘yinda Facebook orqali kirish yo‘q.</td><td><a href="https://www.facebook.com/privacy/policy/">Meta maxfiylik siyosati</a></td></tr>
 <tr><td>Google Play Billing</td><td>Xaridlarni amalga oshirish va tiklash. Bank kartangiz ma’lumotlarini hech qachon ko‘rmaymiz.</td><td><a href="https://policies.google.com/privacy">Google maxfiylik siyosati</a></td></tr>
+<tr><td>Apple App Store (ilova ichidagi xaridlar) – iPhone</td><td>iPhone’da xaridlarni amalga oshirish va tiklash. Bank kartangiz ma’lumotlarini hech qachon ko‘rmaymiz.</td><td><a href="https://www.apple.com/legal/privacy/">Apple maxfiylik siyosati</a></td></tr>
 <tr><td>Unity Technologies (Unity dvigateli)</td><td>O‘yin dvigateli; anonim nosozlik hisobotlarini yuborishi mumkin.</td><td><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity maxfiylik siyosati</a></td></tr>
 </table>
 <p>O‘yin xaritasi OpenStreetMap ma’lumotlari asosida qurilgan (© OpenStreetMap ishtirokchilari); OpenStreetMap’ga siz haqingizda hech qanday ma’lumot yuborilmaydi. Har bir hamkor ma’lumotlarni o‘z maxfiylik siyosatiga muvofiq qayta ishlaydi. Yangi hamkorlar qo‘shsak, bu ro‘yxatni yangilaymiz. <b>Shaxsiy ma’lumotlaringizni pulga sotmaymiz.</b></p>
@@ -201,7 +207,7 @@
 <ul>
 <li><b>Reklama roziligi (YIH, Buyuk Britaniya, Shveytsariya):</b> birinchi ishga tushirishda Google User Messaging Platform taqdim etadigan rozilik oynasi ko‘rsatiladi. Tanlovingizni istalgan vaqtda O‘yindagi <b>Sozlamalar → «Reklama roziligi (GDPR)»</b> bandida o‘zgartirishingiz yoki qaytarib olishingiz mumkin (bu band qonun talab qiladigan joyda ko‘rinadi). Rozilik bermasangiz ham shaxsiylashtirilmagan yoki cheklangan reklama ko‘rishingiz mumkin.</li>
 <li><b>Anonim statistika:</b> <b>HISOB → «Anonim statistika»</b> bandida yoqing yoki o‘chiring.</li>
-<li><b>Shaxsiylashtirilgan reklama:</b> Android qurilmangizda <i>Sozlamalar → Google → Reklama</i> (yoki <i>Sozlamalar → Maxfiylik → Reklama</i>) bo‘limida reklama identifikatorini yangilashingiz yoki o‘chirishingiz mumkin.</li>
+<li><b>Shaxsiylashtirilgan reklama:</b> Android qurilmangizda <i>Sozlamalar → Google → Reklama</i> (yoki <i>Sozlamalar → Maxfiylik → Reklama</i>) bo‘limida reklama identifikatorini yangilashingiz yoki o‘chirishingiz mumkin. iPhone’da O‘yin sizni kuzatishga ruxsat berasizmi deb bir marta so‘raydi (App Tracking Transparency); javobni istalgan vaqtda <i>Sozlamalar → Maxfiylik va xavfsizlik → Kuzatish</i> bo‘limida o‘zgartirishingiz mumkin. Ruxsat bermasangiz, IDFA ishlatilmaydi va shaxsiylashtirilmagan reklama ko‘rasiz.</li>
 <li><b>Reklamasiz:</b> ixtiyoriy «Reklamasiz» xaridi va VIP to‘liq ekranli va banner reklamalarni o‘chiradi.</li>
 <li><b>AQSh shtatlaridagi maxfiylik huquqlari:</b> Kaliforniya va boshqa AQSh shtatlari aholisi maqsadli reklama uchun shaxsiy ma’lumotlarni «sotish» yoki «ulashish»dan yuqoridagidek reklama identifikatorini o‘chirish, O‘yin sozlamalaridagi maxfiylik parametrlari (ko‘rsatilgan joyda) yoki biz bilan bog‘lanish orqali voz kechishi mumkin.</li>
 <li><b>Ko‘rish, tuzatish va o‘chirish:</b> hisobingizni va undagi barcha bulutdagi ma’lumotlarni O‘yinning o‘zida o‘chirishingiz mumkin: <b>HISOB → «Akkauntni o‘chirish»</b>. Shuningdek, bizdan e-pochta orqali so‘rashingiz mumkin. Batafsil yo‘riqnoma: <a href="delete-data.html#uz">Hisob va ma’lumotlarni o‘chirish</a>.</li>

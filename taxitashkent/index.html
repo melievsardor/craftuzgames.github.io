@@ -3,38 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Taxi Tashkent – Toshkent ko‘chalarida taksi simulyatori</title>
-<meta name="description" content="Taxi Tashkent – Toshkentning haqiqiy xaritasida taksi simulyatori va mashina o‘yini: yo‘lovchilar va buyurtmalar, navigator, 24 ta mashina, tyuning, prava test va avtodrom. Android uchun, o‘zbek, rus va ingliz tillarida.">
-<meta name="theme-color" content="#0e1a3a">
+<title>Taxi Tashkent – Toshkentda taksi simulyatori | iPhone va Android</title>
+<meta name="description" content="Taxi Tashkent – Toshkentning 1:1 xaritasida taksi simulyatori: buyurtmalar va navigator, 30 ta mashina, tuning, yoʻl qoidalari, PRAVA imtihoni va avtodrom. iPhone (App Store) va Android (Google Play) uchun bepul, oʻzbek, rus va ingliz tillarida.">
+<meta name="theme-color" content="#0a1029">
+<meta name="apple-itunes-app" content="app-id=6822778737">
 <link rel="canonical" href="https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CraftUz">
 <meta property="og:locale" content="uz_UZ">
+<meta property="og:locale:alternate" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:title" content="Taxi Tashkent – Toshkent ko‘chalarida taksi simulyatori">
-<meta property="og:description" content="Toshkentning haqiqiy ko‘chalarida taksi haydovchisi bo‘ling: buyurtmalar, navigator, 24 ta mashina, tyuning va PRAVA imtihoni.">
+<meta property="og:title" content="Taxi Tashkent – Toshkentda taksi simulyatori">
+<meta property="og:description" content="Toshkentning haqiqiy koʻchalarida taksi haydovchisi boʻling: buyurtmalar, navigator, 30 ta mashina, tuning va PRAVA imtihoni. iPhone va Android uchun bepul.">
 <meta property="og:url" content="https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/">
 <meta property="og:image" content="https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Taxi Tashkent – Malibu taksi, Gelik va Li L9 kechki Toshkentda, orqada teleminora">
+<meta property="og:image:alt" content="Taxi Tashkent – kechki Toshkentda taksi va mashinalar, orqada teleminora">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.png">
-<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/montserrat-extrabold.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="taxitashkent.css">
+<link rel="stylesheet" href="landing.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": ["VideoGame", "MobileApplication"],
   "name": "Taxi Tashkent",
-  "description": "Toshkentning haqiqiy xaritasi asosida qurilgan taksi simulyatori.",
-  "operatingSystem": "ANDROID",
+  "alternateName": ["Taksi Toshkent", "Такси Ташкент", "Taxi Tashkent: Car Simulator"],
+  "description": "A taxi simulator and car driving game on a 1:1 map of Tashkent, Uzbekistan: ride orders with a navigator, 30 cars, tuning, traffic rules, a driving-licence test and an exam track.",
+  "url": "https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/",
+  "image": "https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/img/og.jpg",
+  "screenshot": "https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/img/shots/pickup-1280.webp",
   "applicationCategory": "GameApplication",
   "applicationSubCategory": "Simulation",
+  "genre": ["Simulation", "Driving"],
+  "gamePlatform": ["Android", "iOS"],
+  "operatingSystem": "Android 8.0+, iOS 16.0+",
   "inLanguage": ["uz", "ru", "en"],
-  "image": "https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/img/icon.png",
-  "url": "https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent",
+  "sameAs": [
+    "https://apps.apple.com/app/id6822778737",
+    "https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent"
+  ],
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "author": {
     "@type": "Organization",
@@ -45,102 +57,603 @@
 }
 </script>
 </head>
-<body>
+<body class="landing">
 <header class="bar">
-  <a href="index.html"><img src="img/icon.png" alt="" width="40" height="40"> Taxi Tashkent</a>
-  <nav aria-label="Til / Language">
-    <a href="#uz">O‘zbekcha</a>
-    <a href="#en" lang="en">English</a>
+  <a class="brand-tt" href="#top"><img src="img/icon.png" alt="" width="36" height="36"> Taxi Tashkent</a>
+  <nav class="tt-nav" aria-label="Sahifa / Page">
+    <a class="tt-link" href="#features" data-i="nav_features">Imkoniyatlar</a>
+    <a class="tt-link" href="#city" data-i="nav_city">Shahar</a>
+    <a class="tt-link" href="#cars" data-i="nav_cars">Mashinalar</a>
+    <a class="tt-link" href="#shots" data-i="nav_shots">Rasmlar</a>
+    <a class="tt-link" href="#faq" data-i="nav_faq">Savollar</a>
+    <span class="tt-lang" role="group" aria-label="Til / Язык / Language">
+      <a href="?lang=uz" data-lang="uz" lang="uz" hreflang="uz">UZ</a>
+      <a href="?lang=ru" data-lang="ru" lang="ru" hreflang="ru">RU</a>
+      <a href="?lang=en" data-lang="en" lang="en" hreflang="en">EN</a>
+    </span>
   </nav>
 </header>
 
-<main>
-<section class="tt-hero" id="uz">
-  <img class="app-icon" src="img/icon.png" alt="Taxi Tashkent o‘yini belgisi" width="128" height="128">
-  <h1>Taxi Tashkent</h1>
-  <p class="tagline">Toshkent ko‘chalarida taksi simulyatori</p>
-  <p class="lead">Matiz’da ish boshlang, yo‘lovchilarni navigator bilan manzilga yetkazing, pul yig‘ing va yangi mashinalar oling — Toshkentning haqiqiy ko‘chalari, mahallalari va diqqatga sazovor joylari bo‘ylab. Yangi versiyada mashinalar butunlay qayta yaratildi.</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.6v16.8a1 1 0 0 0 1.52.85l13.5-8.4a1 1 0 0 0 0-1.7L7.52 2.75A1 1 0 0 0 6 3.6z"/></svg>Google Play’dan yuklab oling</a>
-  <p class="note">Bepul · Android 8.0+ · O‘zbekcha, русский, English</p>
-  <div class="checker" aria-hidden="true"></div>
-</section>
-
-<section class="features" aria-label="O‘yin imkoniyatlari">
-  <div class="card">
-    <span class="tile dark" style="--c: #fdc61a" aria-hidden="true">T</span>
-    <h3>Toshkent 1:1</h3>
-    <p>OpenStreetMap asosida qurilgan haqiqiy ko‘chalar, ko‘priklar, metro bekatlari, bozorlar va mahallalar. Shaharni o‘ynab o‘rganing.</p>
-  </div>
-  <div class="card">
-    <span class="tile" style="--c: #2346b8" aria-hidden="true">B</span>
-    <h3>Buyurtmalar va navigator</h3>
-    <p>Zamonaviy taksi ilovalaridagidek buyurtmalar: yo‘lovchi bir daqiqalik masofada, safar 3–5 daqiqa. Navigator burilishlarni oldindan aytadi.</p>
-  </div>
-  <div class="card">
-    <span class="tile" style="--c: #e0483e" aria-hidden="true">M</span>
-    <h3>24 ta mashina</h3>
-    <p>Matiz, Damas, Spark, Nexia, Cobalt, Gentra, Tracker, Malibu — haqiqiy modellar asosida qayta yaratilgan — hamda gibrid, elektromobil va obro‘li SUV’lar. Tyuning: bo‘yoq, disklar, neon, stikerlar.</p>
-  </div>
-  <div class="card">
-    <span class="tile" style="--c: #8a5cf6" aria-hidden="true">Y</span>
-    <h3>Yo‘l qoidalari</h3>
-    <p>Svetoforlar, tezlik kameralari, piyodalar o‘tish joylari va jarimalar — ehtiyotkor haydovchi ko‘proq choy puli va 5 yulduz oladi.</p>
-  </div>
-  <div class="card">
-    <span class="tile" style="--c: #2fbf71" aria-hidden="true">P</span>
-    <h3>PRAVA imtihoni</h3>
-    <p>Haydovchilik guvohnomasini oling: 973 ta rasmiy savol bilan prava test, so‘ng avtodromda amaliy imtihon. Prava egasi har safardan +15% ko‘proq ishlaydi.</p>
-  </div>
-  <div class="card">
-    <span class="tile" style="--c: #ff8a3d" aria-hidden="true">V</span>
-    <h3>Vazifalar va reyting</h3>
-    <p>Kunlik va haftalik vazifalar, 7 kunlik sovg‘a, tadbirlar va haftalik reyting jadvalida boshqa haydovchilar bilan bellashuv.</p>
+<main id="top">
+<section class="tt-hero" aria-labelledby="hero-title">
+  <picture class="art">
+    <img src="img/hero-1600.webp" srcset="img/hero-960.webp 960w, img/hero-1600.webp 1600w, img/hero-2340.webp 2340w" sizes="100vw" width="2340" height="1080" alt="" fetchpriority="high">
+  </picture>
+  <div class="hero-in">
+    <div class="hero-copy">
+      <p class="tt-eyebrow" data-i="eyebrow">Toshkentda taksi simulyatori</p>
+      <h1 id="hero-title">Taxi <span>Tashkent</span></h1>
+      <p class="lead" data-i="lead">Toshkentning haqiqiy koʻchalarida taksi haydovchisi boʻling: yoʻlovchilarni navigator bilan manzilga yetkazing, pul ishlang, prava oling va kichkina Jajji’dan hashamatli Arvoh’gacha 30 ta mashinadan oʻzingizga yoqqanini tanlang.</p>
+      <div class="stores">
+        <a class="store as" href="https://apps.apple.com/app/id6822778737"><img src="img/badges/appstore-en.svg" width="156" height="52" alt="App Store’dan yuklab oling"><span class="soon" data-i="soon">Tez orada</span></a>
+        <a class="store gp" href="https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent"><img src="img/badges/googleplay-uz.png" width="175" height="52" alt="Google Play orqali oling"></a>
+      </div>
+      <p class="note" data-i="note">Bepul · iPhone va Android · Oʻzbekcha, Русский, English</p>
+      <div class="checker" aria-hidden="true"></div>
+    </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="shot-title">
-  <h2 id="shot-title">Kechki Toshkent sizni kutmoqda</h2>
-  <p class="sub">Kun va tun almashinuvi, yomg‘ir, tirbandlik va jonli shahar — har bir safar boshqacha.</p>
-  <img class="shot" src="img/feature.jpg" alt="Taxi Tashkent – Malibu taksi, Gelik va Li L9 kechki Toshkentda" width="1024" height="500" loading="lazy">
+<section class="stats" aria-label="Raqamlarda / In numbers">
+  <ul>
+    <li><span class="tt-num">1:1</span><span data-i="st_map">Toshkent xaritasi</span></li>
+    <li><span class="tt-num">40+</span><span data-i="st_places">diqqatga sazovor joy</span></li>
+    <li><span class="tt-num">30</span><span data-i="st_cars">mashina</span></li>
+    <li><span class="tt-num">973</span><span data-i="st_quiz">prava savoli</span></li>
+    <li><span class="tt-num">3</span><span data-i="st_lang">til</span></li>
+  </ul>
 </section>
 
-<section class="section" aria-labelledby="gal-title">
-  <h2 id="gal-title">O‘yindan lavhalar</h2>
-  <p class="sub">Hammasi o‘yinning o‘zidan: buyurtmalar, tyuning studiyasi, mashinalar va avtodrom.</p>
+<section class="block" id="features" aria-labelledby="feat-title">
+  <div class="block-head">
+    <span class="kicker" data-i="feat_kicker">Imkoniyatlar</span>
+    <h2 id="feat-title" data-i="feat_title">Haqiqiy shahar, haqiqiy ish</h2>
+    <p data-i="feat_sub">Taksi haydovchisining bir kuni – birinchi buyurtmadan tungi shahargacha.</p>
+  </div>
+  <div class="feat-grid">
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.4A7 7 0 0 1 19 9.6C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.6" r="2.6"/></svg></span>
+      <h3 data-i="f1_t">Toshkent 1:1</h3>
+      <p data-i="f1_p">OpenStreetMap maʼlumotlari asosida: haqiqiy koʻchalar, koʻpriklar, mahallalar, metro bekatlari va bozorlar. Navoiy, Amir Temur, Chorsu – hammasi oʻz joyida.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 11.2 20 4l-7.2 16.5-1.9-7.4-7.4-1.9z"/></svg></span>
+      <h3 data-i="f2_t">Buyurtmalar va navigator</h3>
+      <p data-i="f2_p">Taksi ilovalaridagidek buyurtmalar: yoʻlovchini oling va navigator koʻrsatgan yoʻldan manzilga yetkazing. Narx oldindan maʼlum, ustiga choy puli va bonus.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 16.5H3.8a.8.8 0 0 1-.8-.8V13l1.8-4.6A2 2 0 0 1 6.7 7h10.6a2 2 0 0 1 1.9 1.4L21 13v2.7a.8.8 0 0 1-.8.8H19M9 16.5h6M3 13h18"/><circle cx="7" cy="16.5" r="2"/><circle cx="17" cy="16.5" r="2"/></svg></span>
+      <h3 data-i="f3_t">30 ta mashina</h3>
+      <p data-i="f3_p">Start tarifidan Elit’gacha: metan, benzin, gibrid va elektromobillar. Ijaraga oling yoki test-drayv kartasi bilan istalganini sinab koʻring.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h12v5H4zM16 6.5h3v5.5l-7 1.5V16"/><rect x="10.5" y="16" width="3" height="5" rx="1"/></svg></span>
+      <h3 data-i="f4_t">Tuning studiyasi</h3>
+      <p data-i="f4_p">Xameleon, perlamutr va mat boʻyoq, disklar, kuzov toʻplami, neon, tonirovka, stikerlar va davlat raqami.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="19" rx="3"/><circle cx="12" cy="7.2" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="16.8" r="1.6"/></svg></span>
+      <h3 data-i="f5_t">Yoʻl qoidalari</h3>
+      <p data-i="f5_p">Svetoforlar, tezlik kameralari va piyodalar oʻtish joylari. Qoida buzilsa, jarima xati POCHTA’ga keladi.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16.2c.7-1.6 1.9-2.4 3.2-2.4s2.5.8 3.2 2.4M14.5 10h4M14.5 13.5h4"/></svg></span>
+      <h3 data-i="f6_t">PRAVA imtihoni</h3>
+      <p data-i="f6_p">973 ta rasmiy savol bilan nazariy test, soʻng avtodromda amaliy imtihon. Prava egasi har bir safardan +15% koʻp ishlaydi.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3 21h12M4 10h10M14 7.5l3 3v6.2a1.5 1.5 0 0 0 3 0V9.2l-2.6-2.6"/></svg></span>
+      <h3 data-i="f7_t">Zapravka va quvvatlash</h3>
+      <p data-i="f7_p">Benzin va metan shoxobchalari, elektromobillar uchun quvvatlash stansiyalari. Bak tugay desa – navigator eng yaqin zapravkaga olib boradi.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.4-4 4.4-6 8-6s6.6 2 8 6"/></svg></span>
+      <h3 data-i="f8_t">3D haydovchi</h3>
+      <p data-i="f8_p">Oʻz haydovchingizni yarating: yuzning har bir qismi, soch turmagi va kiyimlar – HAYDOVCHI boʻlimida.</p>
+    </article>
+    <article class="feat">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 5.5H5.2a3 3 0 0 0 3 4.4M16 5.5h2.8a3 3 0 0 1-3 4.4M12 13v4M8.5 21h7M9.5 17h5"/></svg></span>
+      <h3 data-i="f9_t">Vazifalar va reyting</h3>
+      <p data-i="f9_p">Kunlik va haftalik vazifalar, 7 kunlik sovgʻa, tadbirlar, promokodlar va haftalik reyting jadvali.</p>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="city" aria-labelledby="city-title">
+  <div class="split">
+    <div class="split-media mosaic">
+      <figure><img src="img/shots/amirtemur-640.webp" width="640" height="360" loading="lazy" alt="" data-ia="alt:pl1"><figcaption data-i="pl1">Amir Temur xiyoboni</figcaption></figure>
+      <figure><img src="img/shots/minor-640.webp" width="640" height="360" loading="lazy" alt="" data-ia="alt:pl4"><figcaption data-i="pl4">Minor masjidi</figcaption></figure>
+      <figure><img src="img/shots/chorsu-640.webp" width="640" height="360" loading="lazy" alt="" data-ia="alt:pl3"><figcaption data-i="pl3">Chorsu bozori</figcaption></figure>
+      <figure><img src="img/shots/hazratiimom-640.webp" width="640" height="360" loading="lazy" alt="" data-ia="alt:pl2"><figcaption data-i="pl2">Hazrati Imom majmuasi</figcaption></figure>
+    </div>
+    <div class="split-text">
+      <span class="kicker" data-i="city_kicker">Shahar</span>
+      <h2 id="city-title" data-i="city_title">Shaharni oʻynab oʻrganing</h2>
+      <p data-i="city_p">Oʻyin xaritasi Toshkentning haqiqiy maʼlumotlaridan qurilgan: koʻchalar, chorrahalar, koʻpriklar, metro bekatlari, mahallalar va 40 dan ortiq diqqatga sazovor joy. Har bir tuman nomi ekranda chiqadi – shaharni bilgan haydovchi tezroq yetib boradi.</p>
+      <ul class="places">
+        <li data-i="pl1">Amir Temur xiyoboni</li>
+        <li data-i="pl2">Hazrati Imom majmuasi</li>
+        <li data-i="pl3">Chorsu bozori</li>
+        <li data-i="pl4">Minor masjidi</li>
+        <li data-i="pl5">Toshkent teleminorasi</li>
+        <li data-i="pl6">Toshkent Siti</li>
+        <li data-i="pl7">Islom sivilizatsiyasi markazi</li>
+        <li data-i="pl8">Ezgulik arkasi</li>
+        <li data-i="pl9">va yana 30 dan ortiq joy</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="drive" aria-labelledby="drive-title">
+  <div class="split flip">
+    <div class="split-media">
+      <img data-l="drive" src="img/shots/drive-uz-1280.webp" width="1280" height="720" loading="lazy" alt="" data-ia="alt:drive_alt">
+    </div>
+    <div class="split-text">
+      <span class="kicker" data-i="drive_kicker">Haydash</span>
+      <h2 id="drive-title" data-i="drive_title">Haqiqiy haydash hissi</h2>
+      <p data-i="drive_p">Har bir mashinaning oʻz dvigatel ovozi, quvvati va yoqilgʻi sarfi bor. Boshqaruvni oʻzingizga moslang.</p>
+      <ul class="checks">
+        <li data-i="d1">Rul, strelkalar yoki telefonni qiyshaytirib boshqarish</li>
+        <li data-i="d2">4 xil kamera, jumladan salon ichidan koʻrinish</li>
+        <li data-i="d3">Tebranish (haptika): bordyur, zarba, shinalar</li>
+        <li data-i="d4">Kun va tun, jonli trafik va piyodalar</li>
+        <li data-i="d5">Svetofor, kamera va jarimalar – haqiqiy shahar qoidalari</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cars" aria-labelledby="cars-title">
+  <div class="block-head">
+    <span class="kicker" data-i="cars_kicker">Garaj</span>
+    <h2 id="cars-title" data-i="cars_title">30 ta mashina</h2>
+    <p data-i="cars_sub">Toshkent koʻchalarining sevimli taksilaridan obroʻli SUV va elektr superkarlargacha. Har biri oʻz tarifida ishlaydi: qimmatroq mashina – qimmatroq buyurtma.</p>
+  </div>
+  <img class="cars-banner" src="img/shots/lineup-1280.webp" width="1280" height="720" loading="lazy" alt="" data-ia="alt:cars_alt">
+  <div class="car-groups">
+    <div class="car-group">
+      <h3 data-i="g1_t">Ommabop</h3>
+      <p class="count" data-i="g1_c">13 ta · Start, Komfort, Komfort+</p>
+      <ul class="chips">
+        <li><i class="dot m"></i><small>Bantik</small> <b>Jajji</b></li>
+        <li><i class="dot m"></i><small>Bantik</small> <b>Mahalla</b></li>
+        <li><i class="dot"></i><small>Bantik</small> <b>Uchqun</b></li>
+        <li><i class="dot m"></i><small>Koinot</small> <b>Afsona 2</b></li>
+        <li><i class="dot m"></i><small>Bantik</small> <b>Afsona 3</b></li>
+        <li><i class="dot m"></i><small>Bantik</small> <b>Lojuvard</b></li>
+        <li><i class="dot"></i><small>Bantik</small> <b>Aqiq</b></li>
+        <li><i class="dot"></i><small>Bantik</small> <b>Avlod</b></li>
+        <li><i class="dot"></i><small>Bantik</small> <b>Ovchi</b></li>
+        <li><i class="dot e"></i><small>Orzu</small> <b>Orda</b></li>
+        <li><i class="dot"></i><small>Bantik</small> <b>Navruz</b></li>
+        <li><i class="dot"></i><small>Bantik</small> <b>Zomin</b></li>
+        <li><i class="dot"></i><small>Sharq</small> <b>Tulpor</b></li>
+      </ul>
+    </div>
+    <div class="car-group">
+      <h3 data-i="g2_t">Premium</h3>
+      <p class="count" data-i="g2_c">8 ta · Komfort+, Elektro, Biznes</p>
+      <ul class="chips">
+        <li><i class="dot h"></i><small>Orzu</small> <b>Shamol</b></li>
+        <li><i class="dot e"></i><small>Sakra</small> <b>Jayron</b></li>
+        <li><i class="dot h"></i><small>Orzu</small> <b>Xorazm</b></li>
+        <li><i class="dot e"></i><small>Ampir</small> <b>Oqim</b></li>
+        <li><i class="dot h"></i><small>Orzu</small> <b>Kushon</b></li>
+        <li><i class="dot e"></i><small>Orzu</small> <b>Somoniy</b></li>
+        <li><i class="dot e"></i><small>Kashf</small> <b>Sayyoh</b></li>
+        <li><i class="dot h"></i><small>Komil</small> <b>Oila</b></li>
+      </ul>
+    </div>
+    <div class="car-group">
+      <h3 data-i="g3_t">Obroʻli</h3>
+      <p class="count" data-i="g3_c">9 ta · Biznes, Premyer, Elit</p>
+      <ul class="chips">
+        <li><i class="dot e"></i><small>Ampir</small> <b>Bunker</b></li>
+        <li><i class="dot"></i><small>Bantik</small> <b>Chorvoq</b></li>
+        <li><i class="dot"></i><small>Daichi</small> <b>Sahro</b></li>
+        <li><i class="dot"></i><small>Yulduz</small> <b>Saroy</b></li>
+        <li><i class="dot"></i><small>Donnerwerk</small> <b>Sturm</b></li>
+        <li><i class="dot"></i><small>Hashamat</small> <b>Sarvar</b></li>
+        <li><i class="dot"></i><small>Yulduz</small> <b>Qoplon</b></li>
+        <li><i class="dot e"></i><small>Samo</small> <b>Burgut</b></li>
+        <li><i class="dot"></i><small>Shohona</small> <b>Arvoh</b></li>
+      </ul>
+    </div>
+  </div>
+  <ul class="legend">
+    <li><i class="dot m"></i><span data-i="fuel_m">metan</span></li>
+    <li><i class="dot"></i><span data-i="fuel_p">benzin</span></li>
+    <li><i class="dot h"></i><span data-i="fuel_h">gibrid</span></li>
+    <li><i class="dot e"></i><span data-i="fuel_e">elektro</span></li>
+  </ul>
+  <p class="fine" data-i="cars_note">Oʻyindagi barcha mashina markalari, modellari va emblemalari xayoliy.</p>
+</section>
+
+<section class="block" id="shots" aria-labelledby="shots-title">
+  <div class="block-head">
+    <span class="kicker" data-i="shots_kicker">Rasmlar</span>
+    <h2 id="shots-title" data-i="shots_title">Oʻyindan lavhalar</h2>
+    <p data-i="shots_sub">Hammasi oʻyinning oʻzidan olingan kadrlar.</p>
+  </div>
   <div class="gallery">
-    <img src="img/shot1.jpg" alt="Amir Temur xiyobonida yo‘lovchi olish va Toshkent Siti’da tushirish" width="1280" height="720" loading="lazy">
-    <img src="img/shot2.jpg" alt="Tyuning studiyasi: xameleon bo‘yoq, disklar va neon" width="1280" height="720" loading="lazy">
-    <img src="img/shot3.jpg" alt="Navoiy ko‘chasida mashinalar qatori va garaj" width="1280" height="720" loading="lazy">
-    <img src="img/shot4.jpg" alt="Navigator va taksometr bilan safar" width="1280" height="720" loading="lazy">
+    <figure><button type="button" data-full="img/shots/pickup-1280.webp"><img src="img/shots/pickup-640.webp" srcset="img/shots/pickup-640.webp 640w, img/shots/pickup-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s1"></button><figcaption data-i="s1">Amir Temur xiyobonida yoʻlovchi olish</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/drop-1280.webp"><img src="img/shots/drop-640.webp" srcset="img/shots/drop-640.webp 640w, img/shots/drop-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s2"></button><figcaption data-i="s2">Toshkent Siti’da manzilga yetkazish</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/tuning-uz-1280.webp"><img data-l="tuning" src="img/shots/tuning-uz-640.webp" srcset="img/shots/tuning-uz-640.webp 640w, img/shots/tuning-uz-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s3"></button><figcaption data-i="s3">Tuning studiyasi: boʻyoq, disklar, neon</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/garage-uz-1280.webp"><img data-l="garage" src="img/shots/garage-uz-640.webp" srcset="img/shots/garage-uz-640.webp 640w, img/shots/garage-uz-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s4"></button><figcaption data-i="s4">Garaj: 30 ta mashina va ularning xususiyatlari</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/night-1280.webp"><img src="img/shots/night-640.webp" srcset="img/shots/night-640.webp 640w, img/shots/night-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s5"></button><figcaption data-i="s5">Tungi Toshkent Siti</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/tvtower-1280.webp"><img src="img/shots/tvtower-640.webp" srcset="img/shots/tvtower-640.webp 640w, img/shots/tvtower-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s6"></button><figcaption data-i="s6">Toshkent teleminorasi</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/quiz-uz-1280.webp"><img data-l="quiz" src="img/shots/quiz-uz-640.webp" srcset="img/shots/quiz-uz-640.webp 640w, img/shots/quiz-uz-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s7"></button><figcaption data-i="s7">PRAVA: 973 ta rasmiy savol</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/avtodrom-1280.webp"><img src="img/shots/avtodrom-640.webp" srcset="img/shots/avtodrom-640.webp 640w, img/shots/avtodrom-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s8"></button><figcaption data-i="s8">Avtodromda amaliy imtihon</figcaption></figure>
+    <figure><button type="button" data-full="img/shots/missions-uz-1280.webp"><img data-l="missions" src="img/shots/missions-uz-640.webp" srcset="img/shots/missions-uz-640.webp 640w, img/shots/missions-uz-1280.webp 1280w" sizes="(min-width: 900px) 370px, (min-width: 560px) 46vw, 84vw" width="640" height="360" loading="lazy" alt="" data-ia="alt:s9"></button><figcaption data-i="s9">Kunlik vazifalar va 7 kunlik sovgʻa</figcaption></figure>
   </div>
 </section>
 
-<section class="section" id="en" lang="en">
-  <div class="en-box">
-    <h2>Taxi Tashkent — a taxi simulator in the real streets of Tashkent</h2>
-    <p>Start with a small Matiz, pick up passengers and drive them to their destinations with the in-game navigator, earn money and buy better cars – all in a 1:1 map of Tashkent built from OpenStreetMap data. The game is in Uzbek, Russian and English.</p>
-    <ul class="checks">
-      <li>Real streets, metro stations, bazaars and landmarks of Tashkent</li>
-      <li>Short, varied orders with a turn-by-turn navigator</li>
-      <li>24 cars from economy to premium, rebuilt from real models, with tuning and paint</li>
-      <li>Traffic lights, speed cameras, pedestrian crossings and fines</li>
-      <li>Driving-licence theory test and practical exam</li>
-      <li>Daily and weekly missions, events and leaderboards</li>
+<section class="block" id="news" aria-labelledby="news-title">
+  <div class="news">
+    <h2 id="news-title" data-i="news_title">Soʻnggi yangilanishlar</h2>
+    <p data-i="news_sub">Oʻyin muntazam yangilanib boradi.</p>
+    <ul>
+      <li><span class="tag" data-i="tag_new">Yangi</span><span data-i="n1"><b>iPhone versiyasi</b> – App Store’da; natijalar Apple ID bilan saqlanadi.</span></li>
+      <li><span class="tag" data-i="tag_new">Yangi</span><span data-i="n2"><b>Test-drayv kartalari</b> – istalgan mashinani yarim kun yoki butun kun sinab koʻring.</span></li>
+      <li><span class="tag" data-i="tag_new">Yangi</span><span data-i="n3"><b>Promokodlar</b> – asosiy menyudagi PROMOKOD tugmasi orqali sovgʻalar.</span></li>
+      <li><span class="tag" data-i="tag_upd">Yangilandi</span><span data-i="n4"><b>Qatʼiy narx</b> – buyurtma kartasidagi summa aynan siz oladigan pul.</span></li>
+      <li><span class="tag" data-i="tag_upd">Yangilandi</span><span data-i="n5"><b>Yoqilgʻi</b> – bir bak 15–30 daqiqalik oʻyinga yetadi.</span></li>
     </ul>
-    <a class="btn small" href="https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.6v16.8a1 1 0 0 0 1.52.85l13.5-8.4a1 1 0 0 0 0-1.7L7.52 2.75A1 1 0 0 0 6 3.6z"/></svg>Get it on Google Play</a>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="faq-title">
+  <div class="block-head">
+    <span class="kicker" data-i="faq_kicker">Savollar</span>
+    <h2 id="faq-title" data-i="faq_title">Koʻp soʻraladigan savollar</h2>
+  </div>
+  <div class="faq">
+    <details><summary data-i="q1">Oʻyin bepulmi?</summary><p data-i="a1">Ha, Taxi Tashkent’ni yuklab olish va oʻynash bepul. Oʻyinda reklama va ixtiyoriy xaridlar (oʻyin puli, VIP, mashinalar, reklamasiz rejim) bor – ularsiz ham bemalol oʻynash mumkin.</p></details>
+    <details><summary data-i="q2">Qaysi qurilmalarda ishlaydi?</summary><p data-i="a2">Android 8.0 va undan yangi telefonlarda (Google Play) hamda iOS 16 va undan yangi iPhone’larda – iPhone XS / XR va keyingi modellar (App Store). Windows kompyuterda Google Play Games ilovasi orqali oʻrnatib (qidiruvga «Taxi Tashkent» deb yozing), klaviatura bilan oʻynash mumkin.</p></details>
+    <details><summary data-i="q3">Natijalarim yangi telefonga oʻtadimi?</summary><p data-i="a3">Ha. Oʻyin mehmon hisobi bilan boshlanadi. Hisobingizni Google (Android) yoki Apple ID (iPhone) bilan bogʻlang – pul, mashinalar va prava bulutda saqlanadi va shu platformadagi yangi telefonda qaytadi.</p></details>
+    <details><summary data-i="q4">Promokodni qayerga yozaman?</summary><p data-i="a4">Asosiy menyudagi PROMOKOD tugmasini bosing va kodni kiriting. Promokod havolasini telefonda ochsangiz, oʻyin kod yozilgan holda ochiladi.</p></details>
+    <details><summary data-i="q5">Mashinalar haqiqiy markalarmi?</summary><p data-i="a5">Yoʻq. Oʻyindagi barcha mashina markalari, modellari va emblemalari xayoliy (Bantik, Koinot, Orzu, Yulduz va boshqalar) – ular Toshkent koʻchalari ruhida yaratilgan.</p></details>
+    <details><summary data-i="q6">Prava testi haqiqiy imtihonga oʻxshaydimi?</summary><p data-i="a6">Nazariy qism Oʻzbekistonning amaldagi yoʻl harakati qoidalari asosidagi 973 ta savoldan iborat, soʻng avtodromda mashq va imtihon. Bu oʻyin: qoidalarni takrorlashga yordam beradi, lekin rasmiy imtihon oʻrnini bosmaydi.</p></details>
+    <details><summary data-i="q7">Hisobim va maʼlumotlarimni qanday oʻchiraman?</summary><p data-i="a7">Oʻyinning oʻzidan yoki <a href="delete-data.html#uz">Hisobni oʻchirish</a> sahifasidagi yoʻriqnoma boʻyicha.</p></details>
+    <details><summary data-i="q8">Taklif yoki muammo boʻlsa-chi?</summary><p data-i="a8"><a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a> manziliga yozing – oʻyin versiyasi va telefon modelini ham koʻrsating.</p></details>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="cta-in">
+    <img class="app-icon" src="img/icon.png" width="112" height="112" alt="" loading="lazy">
+    <div>
+      <h2 id="cta-title" data-i="cta_title">Toshkent sizni kutmoqda</h2>
+      <p data-i="cta_p">Birinchi yoʻlovchi bir daqiqalik masofada. Kalitni oling – smena boshlandi!</p>
+      <div class="stores">
+        <a class="store as" href="https://apps.apple.com/app/id6822778737"><img src="img/badges/appstore-en.svg" width="156" height="52" alt="App Store’dan yuklab oling" loading="lazy"><span class="soon" data-i="soon">Tez orada</span></a>
+        <a class="store gp" href="https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent"><img src="img/badges/googleplay-uz.png" width="175" height="52" alt="Google Play orqali oling" loading="lazy"></a>
+      </div>
+    </div>
   </div>
 </section>
 </main>
 
 <footer>
   <nav class="foot-links" aria-label="Pages / Sahifalar">
-    <a href="privacy.html">Maxfiylik / Privacy</a>
-    <a href="terms.html">Shartlar / Terms</a>
-    <a href="delete-data.html">Hisobni o‘chirish / Delete account</a>
-    <a href="../index.html">Barcha o‘yinlar / All games</a>
+    <a class="doc-link" href="privacy.html#uz" data-i="ft_privacy">Maxfiylik siyosati</a>
+    <a class="doc-link" href="terms.html#uz" data-i="ft_terms">Foydalanish shartlari</a>
+    <a class="doc-link" href="delete-data.html#uz" data-i="ft_delete">Hisobni oʻchirish</a>
+    <a href="../index.html" data-i="ft_games">Barcha oʻyinlar</a>
   </nav>
   <p>© 2026 CraftUz · <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a></p>
-  <p>Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></p>
+  <p data-i="ft_map">Xarita maʼlumotlari © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap hissadorlari</a></p>
+  <p class="small" data-i="ft_tm">Apple, Apple logotipi va App Store – Apple Inc. kompaniyasining tovar belgilari. Google Play va Google Play logotipi – Google LLC kompaniyasining tovar belgilari. Oʻyindagi mashina markalari xayoliy.</p>
 </footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Rasm">
+  <img id="lb-img" src="data:," alt="">
+  <p id="lb-cap"></p>
+  <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Oldingi / Previous">‹</button>
+  <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Keyingi / Next">›</button>
+  <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Yopish / Close">×</button>
+</dialog>
+
+<script>
+(function () {
+  var APP_ID = '6822778737';
+  var PLAY = 'https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent' +
+    '&referrer=' + encodeURIComponent('utm_source=craftuz_site&utm_medium=landing');
+
+  var META = {
+    uz: {
+      title: 'Taxi Tashkent – Toshkentda taksi simulyatori | iPhone va Android',
+      desc: document.querySelector('meta[name=description]').content,
+      as: 'App Store’dan yuklab oling', gp: 'Google Play orqali oling', badge: 'en'
+    },
+    ru: {
+      title: 'Taxi Tashkent – симулятор такси в Ташкенте | iPhone и Android',
+      desc: 'Taxi Tashkent – симулятор такси на карте Ташкента 1:1: заказы и навигатор, 30 машин, тюнинг, ПДД, экзамен на права и автодром. Бесплатно для iPhone (App Store) и Android (Google Play), на узбекском, русском и английском.',
+      as: 'Загрузите в App Store', gp: 'Доступно в Google Play', badge: 'ru'
+    },
+    en: {
+      title: 'Taxi Tashkent – taxi simulator in real Tashkent | iPhone & Android',
+      desc: 'Taxi Tashkent is a taxi simulator on a 1:1 map of Tashkent: ride orders and a navigator, 30 cars, tuning, traffic rules, a driving-licence test and an exam track. Free on iPhone (App Store) and Android (Google Play), in Uzbek, Russian and English.',
+      as: 'Download on the App Store', gp: 'Get it on Google Play', badge: 'en'
+    }
+  };
+
+  var T = {
+    ru: {
+      nav_features: 'Возможности', nav_city: 'Город', nav_cars: 'Машины', nav_shots: 'Скриншоты', nav_faq: 'Вопросы',
+      eyebrow: 'Симулятор такси в Ташкенте',
+      lead: 'Станьте таксистом на настоящих улицах Ташкента: везите пассажиров по навигатору, зарабатывайте, получите права и выберите машину по душе из 30 – от малютки Jajji до роскошного Arvoh.',
+      soon: 'Скоро',
+      note: 'Бесплатно · iPhone и Android · Oʻzbekcha, Русский, English',
+      st_map: 'карта Ташкента', st_places: 'достопримечательностей', st_cars: 'машин', st_quiz: 'вопросов ПДД', st_lang: 'языка',
+      feat_kicker: 'Возможности', feat_title: 'Настоящий город, настоящая работа',
+      feat_sub: 'Один день таксиста – от первого заказа до ночного города.',
+      f1_t: 'Ташкент 1:1',
+      f1_p: 'По данным OpenStreetMap: настоящие улицы, мосты, махалли, станции метро и базары. Навои, Амир Темур, Чорсу – всё на своих местах.',
+      f2_t: 'Заказы и навигатор',
+      f2_p: 'Заказы как в приложениях такси: заберите пассажира и довезите его по маршруту навигатора. Цена известна заранее, сверху – чаевые и бонусы.',
+      f3_t: '30 машин',
+      f3_p: 'От тарифа Старт до Элит: метан, бензин, гибриды и электромобили. Берите в аренду или попробуйте любую по карте тест-драйва.',
+      f4_t: 'Тюнинг-студия',
+      f4_p: 'Покраска хамелеон, перламутр и мат, диски, обвесы, неон, тонировка, наклейки и номера.',
+      f5_t: 'ПДД и штрафы',
+      f5_p: 'Светофоры, камеры скорости и пешеходные переходы. Нарушили – письмо со штрафом придёт на ПОЧТУ.',
+      f6_t: 'Экзамен на права',
+      f6_p: 'Теория: 973 официальных вопроса, затем практический экзамен на автодроме. С правами каждая поездка приносит на 15% больше.',
+      f7_t: 'Заправки и зарядки',
+      f7_p: 'Бензиновые и метановые заправки, зарядные станции для электромобилей. Топливо на исходе – навигатор приведёт к ближайшей.',
+      f8_t: '3D-водитель',
+      f8_p: 'Создайте своего водителя: каждая черта лица, причёска и одежда – в разделе ВОДИТЕЛЬ.',
+      f9_t: 'Задания и рейтинг',
+      f9_p: 'Ежедневные и еженедельные задания, подарок за 7 дней, события, промокоды и недельная таблица лидеров.',
+      city_kicker: 'Город', city_title: 'Изучайте город, играя',
+      city_p: 'Карта игры построена по реальным данным Ташкента: улицы, перекрёстки, мосты, станции метро, махалли и более 40 достопримечательностей. Название района появляется на экране – кто знает город, тот приезжает быстрее.',
+      pl1: 'Сквер Амира Темура', pl2: 'Комплекс Хазрати Имам', pl3: 'Базар Чорсу', pl4: 'Мечеть Минор',
+      pl5: 'Ташкентская телебашня', pl6: 'Tashkent City', pl7: 'Центр исламской цивилизации', pl8: 'Арка Эзгулик',
+      pl9: 'и ещё более 30 мест',
+      drive_kicker: 'Вождение', drive_title: 'Настоящее ощущение вождения',
+      drive_p: 'У каждой машины свой звук мотора, мощность и расход топлива. Настройте управление под себя.',
+      drive_alt: 'Поездка с навигатором, мини-картой и таксометром',
+      d1: 'Руль, стрелки или наклон телефона', d2: '4 камеры, включая вид из салона',
+      d3: 'Вибрация: бордюры, удары, шины', d4: 'День и ночь, живой трафик и пешеходы',
+      d5: 'Светофоры, камеры и штрафы – правила настоящего города',
+      cars_kicker: 'Гараж', cars_title: '30 машин',
+      cars_sub: 'От любимых такси ташкентских улиц до статусных внедорожников и электрических суперкаров. Каждая работает в своём тарифе: дороже машина – дороже заказы.',
+      cars_alt: 'Машины игры на улице Навои',
+      g1_t: 'Народные', g1_c: '13 машин · Старт, Комфорт, Комфорт+',
+      g2_t: 'Премиум', g2_c: '8 машин · Комфорт+, Электро, Бизнес',
+      g3_t: 'Статусные', g3_c: '9 машин · Бизнес, Премьер, Элит',
+      fuel_m: 'метан', fuel_p: 'бензин', fuel_h: 'гибрид', fuel_e: 'электро',
+      cars_note: 'Все марки, модели и эмблемы машин в игре вымышленные.',
+      shots_kicker: 'Скриншоты', shots_title: 'Кадры из игры', shots_sub: 'Все кадры сняты в самой игре.',
+      s1: 'Пассажир у сквера Амира Темура', s2: 'Высадка в Tashkent City', s3: 'Тюнинг-студия: краска, диски, неон',
+      s4: 'Гараж: 30 машин с характеристиками', s5: 'Ночной Tashkent City', s6: 'Ташкентская телебашня',
+      s7: 'Права: 973 официальных вопроса', s8: 'Экзамен на автодроме', s9: 'Ежедневные задания и подарок за 7 дней',
+      news_title: 'Последние обновления', news_sub: 'Игра регулярно обновляется.',
+      tag_new: 'Новое', tag_upd: 'Обновлено',
+      n1: '<b>Версия для iPhone</b> – в App Store; прогресс сохраняется через Apple ID.',
+      n2: '<b>Карты тест-драйва</b> – любая машина на полдня или на целый день.',
+      n3: '<b>Промокоды</b> – подарки через кнопку ПРОМОКОД в главном меню.',
+      n4: '<b>Фиксированная цена</b> – сумма на карточке заказа ровно ваш заработок.',
+      n5: '<b>Топливо</b> – одного бака хватает на 15–30 минут игры.',
+      faq_kicker: 'Вопросы', faq_title: 'Частые вопросы',
+      q1: 'Игра бесплатная?',
+      a1: 'Да, скачать Taxi Tashkent и играть бесплатно. В игре есть реклама и необязательные покупки (игровые деньги, VIP, машины, отключение рекламы) – без них тоже можно спокойно играть.',
+      q2: 'На каких устройствах работает?',
+      a2: 'На телефонах с Android 8.0 и новее (Google Play) и на iPhone с iOS 16 и новее – iPhone XS / XR и более поздние модели (App Store). На компьютере с Windows игру можно установить через приложение Google Play Games (найдите «Taxi Tashkent» в поиске) и играть с клавиатуры.',
+      q3: 'Перенесётся ли прогресс на новый телефон?',
+      a3: 'Да. Игра начинается с гостевого аккаунта. Привяжите аккаунт Google (Android) или Apple ID (iPhone) – деньги, машины и права сохранятся в облаке и вернутся на новом телефоне той же платформы.',
+      q4: 'Куда вводить промокод?',
+      a4: 'Нажмите кнопку ПРОМОКОД в главном меню и введите код. Если открыть ссылку с промокодом на телефоне, игра откроется с уже введённым кодом.',
+      q5: 'Машины – настоящие марки?',
+      a5: 'Нет. Все марки, модели и эмблемы машин в игре вымышленные (Bantik, Koinot, Orzu, Yulduz и другие) – они созданы в духе ташкентских улиц.',
+      q6: 'Экзамен на права как настоящий?',
+      a6: 'Теория – 973 вопроса по действующим ПДД Узбекистана, затем практика и экзамен на автодроме. Это игра: она помогает повторить правила, но не заменяет официальный экзамен.',
+      q7: 'Как удалить аккаунт и данные?',
+      a7: 'В самой игре или по инструкции на странице <a href="delete-data.html#en">«Удаление аккаунта»</a>.',
+      q8: 'Есть идея или нашли ошибку?',
+      a8: 'Напишите на <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a> – укажите версию игры и модель телефона.',
+      cta_title: 'Ташкент ждёт вас',
+      cta_p: 'Первый пассажир – в минуте езды. Берите ключи – смена началась!',
+      ft_privacy: 'Конфиденциальность', ft_terms: 'Условия использования', ft_delete: 'Удаление аккаунта', ft_games: 'Все игры',
+      ft_map: 'Данные карты © <a href="https://www.openstreetmap.org/copyright">участники OpenStreetMap</a>',
+      ft_tm: 'Apple, логотип Apple и App Store – товарные знаки Apple Inc. Google Play и логотип Google Play – товарные знаки Google LLC. Марки машин в игре вымышленные.'
+    },
+    en: {
+      nav_features: 'Features', nav_city: 'City', nav_cars: 'Cars', nav_shots: 'Screenshots', nav_faq: 'FAQ',
+      eyebrow: 'Taxi simulator in Tashkent',
+      lead: 'Drive a taxi through the real streets of Tashkent: take passengers where they need to go with the navigator, earn money, get your licence and pick your ride from 30 cars – from the tiny Jajji to the lavish Arvoh.',
+      soon: 'Coming soon',
+      note: 'Free · iPhone & Android · Oʻzbekcha, Русский, English',
+      st_map: 'map of Tashkent', st_places: 'landmarks', st_cars: 'cars', st_quiz: 'licence questions', st_lang: 'languages',
+      feat_kicker: 'Features', feat_title: 'A real city, a real job',
+      feat_sub: 'A taxi driver’s day – from the first order to the city at night.',
+      f1_t: 'Tashkent 1:1',
+      f1_p: 'Built from OpenStreetMap: real streets, bridges, mahallas, metro stations and bazaars. Navoi Street, Amir Temur Square, Chorsu – all where they belong.',
+      f2_t: 'Orders and navigator',
+      f2_p: 'Ride-hailing style orders: pick up the passenger and follow the navigator to the drop-off. The fare is fixed up front, with tips and bonuses on top.',
+      f3_t: '30 cars',
+      f3_p: 'From the Start tariff to Elite: methane, petrol, hybrids and EVs. Rent one, or try any car with a test-drive card.',
+      f4_t: 'Tuning studio',
+      f4_p: 'Chameleon, pearl and matte paint, rims, body kits, neon, window tint, stickers and number plates.',
+      f5_t: 'Traffic rules',
+      f5_p: 'Traffic lights, speed cameras and pedestrian crossings. Break a rule and the fine arrives in your MAIL.',
+      f6_t: 'Driving licence exam',
+      f6_p: 'A theory test with 973 official questions, then a practical exam on the driving range. Licence holders earn 15% more on every ride.',
+      f7_t: 'Fuel and charging',
+      f7_p: 'Petrol and methane stations, chargers for electric cars. Running low? The navigator takes you to the nearest one.',
+      f8_t: '3D driver',
+      f8_p: 'Create your own driver: every feature of the face, the hairstyle and the outfit – in the DRIVER tab.',
+      f9_t: 'Missions and leaderboards',
+      f9_p: 'Daily and weekly missions, a 7-day gift, events, promo codes and a weekly leaderboard.',
+      city_kicker: 'City', city_title: 'Learn the city as you play',
+      city_p: 'The game map is built from real Tashkent data: streets, junctions, bridges, metro stations, mahallas and 40+ landmarks. District names pop up as you drive – drivers who know the city get there faster.',
+      pl1: 'Amir Temur Square', pl2: 'Hazrati Imam Complex', pl3: 'Chorsu Bazaar', pl4: 'Minor Mosque',
+      pl5: 'Tashkent TV Tower', pl6: 'Tashkent City', pl7: 'Centre of Islamic Civilization', pl8: 'Ezgulik Arch',
+      pl9: 'and 30+ more places',
+      drive_kicker: 'Driving', drive_title: 'It feels like real driving',
+      drive_p: 'Every car has its own engine sound, power and fuel use. Set up the controls your way.',
+      drive_alt: 'A ride with the navigator, mini-map and taximeter',
+      d1: 'Steering wheel, arrows or tilt steering', d2: '4 cameras, including the view from the driver’s seat',
+      d3: 'Haptic feedback: kerbs, bumps, tyres', d4: 'Day and night, live traffic and pedestrians',
+      d5: 'Traffic lights, cameras and fines – real city rules',
+      cars_kicker: 'Garage', cars_title: '30 cars',
+      cars_sub: 'From Tashkent’s favourite taxis to prestige SUVs and electric hypercars. Each one works its own tariff: a pricier car brings pricier orders.',
+      cars_alt: 'The game’s cars on Navoi Street',
+      g1_t: 'Everyday', g1_c: '13 cars · Start, Comfort, Comfort+',
+      g2_t: 'Premium', g2_c: '8 cars · Comfort+, Electro, Business',
+      g3_t: 'Prestige', g3_c: '9 cars · Business, Premier, Elite',
+      fuel_m: 'methane', fuel_p: 'petrol', fuel_h: 'hybrid', fuel_e: 'electric',
+      cars_note: 'All car makes, models and emblems in the game are fictional.',
+      shots_kicker: 'Screenshots', shots_title: 'Screenshots', shots_sub: 'Every frame is captured in the game itself.',
+      s1: 'Pick-up at Amir Temur Square', s2: 'Drop-off at Tashkent City', s3: 'Tuning studio: paint, rims, neon',
+      s4: 'Garage: 30 cars with their specs', s5: 'Tashkent City at night', s6: 'Tashkent TV Tower',
+      s7: 'Licence: 973 official questions', s8: 'Exam on the driving range', s9: 'Daily missions and a 7-day gift',
+      news_title: 'Latest updates', news_sub: 'The game is updated regularly.',
+      tag_new: 'New', tag_upd: 'Updated',
+      n1: '<b>iPhone version</b> – on the App Store; progress is saved with your Apple ID.',
+      n2: '<b>Test-drive cards</b> – try any car for half a day or a whole day.',
+      n3: '<b>Promo codes</b> – gifts through the PROMO button in the main menu.',
+      n4: '<b>Fixed fares</b> – the price on the order card is exactly what you earn.',
+      n5: '<b>Fuel</b> – one tank lasts 15–30 minutes of play.',
+      faq_kicker: 'FAQ', faq_title: 'Frequently asked questions',
+      q1: 'Is the game free?',
+      a1: 'Yes, Taxi Tashkent is free to download and play. It has ads and optional purchases (in-game cash, VIP, cars, no ads) – you can enjoy the game without them.',
+      q2: 'Which devices does it run on?',
+      a2: 'Phones with Android 8.0 or newer (Google Play) and iPhones with iOS 16 or newer – iPhone XS / XR and later (App Store). On a Windows PC you can install it through the Google Play Games app (search for “Taxi Tashkent”) and play with a keyboard.',
+      q3: 'Will my progress move to a new phone?',
+      a3: 'Yes. You start with a guest account. Link your Google account (Android) or Apple ID (iPhone) and your cash, cars and licence are kept in the cloud and come back on a new phone of the same platform.',
+      q4: 'Where do I enter a promo code?',
+      a4: 'Tap PROMO in the main menu and type the code. A promo link opened on your phone launches the game with the code already filled in.',
+      q5: 'Are the cars real brands?',
+      a5: 'No. All car makes, models and emblems in the game are fictional (Bantik, Koinot, Orzu, Yulduz and more) – designed in the spirit of Tashkent’s streets.',
+      q6: 'Is the licence test like the real one?',
+      a6: 'The theory part has 973 questions based on Uzbekistan’s current traffic rules, followed by practice and an exam on the driving range. It’s a game: great for revising the rules, but not a replacement for the official exam.',
+      q7: 'How do I delete my account and data?',
+      a7: 'From inside the game, or follow the steps on the <a href="delete-data.html#en">Delete account</a> page.',
+      q8: 'Have an idea or found a bug?',
+      a8: 'Write to <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a> – please include the game version and your phone model.',
+      cta_title: 'Tashkent is waiting',
+      cta_p: 'Your first passenger is a minute away. Grab the keys – your shift has started!',
+      ft_privacy: 'Privacy policy', ft_terms: 'Terms of use', ft_delete: 'Delete account', ft_games: 'All games',
+      ft_map: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+      ft_tm: 'Apple, the Apple logo and App Store are trademarks of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC. The car makes in the game are fictional.'
+    }
+  };
+
+  var LANGS = ['uz', 'ru', 'en'];
+  var textNodes = Array.prototype.slice.call(document.querySelectorAll('[data-i]'));
+  var attrNodes = Array.prototype.slice.call(document.querySelectorAll('[data-ia]'));
+  var UZ = {};
+  textNodes.forEach(function (el) { if (!(el.dataset.i in UZ)) UZ[el.dataset.i] = el.innerHTML; });
+  function tr(lang, key) {
+    if (lang !== 'uz' && T[lang] && T[lang][key] != null) return T[lang][key];
+    return UZ[key];
+  }
+  function plain(html) { var d = document.createElement('div'); d.innerHTML = html || ''; return d.textContent; }
+
+  function pickLang() {
+    var q = new URLSearchParams(location.search).get('lang');
+    var h = (location.hash || '').replace('#', '');
+    if (LANGS.indexOf(q) >= 0) return q;
+    if (LANGS.indexOf(h) >= 0) return h;
+    try { var s = localStorage.getItem('tt_lang'); if (LANGS.indexOf(s) >= 0) return s; } catch (e) { }
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'uz';
+    nav = nav.slice(0, 2).toLowerCase();
+    return LANGS.indexOf(nav) >= 0 ? nav : (/^(kk|ky|tg|tk|be|uk)$/.test(nav) ? 'ru' : 'en');
+  }
+
+  var lang = 'uz';
+  function apply(l) {
+    lang = l;
+    var m = META[l];
+    document.documentElement.lang = l;
+    document.title = m.title;
+    document.querySelector('meta[name=description]').content = m.desc;
+    textNodes.forEach(function (el) { el.innerHTML = tr(l, el.dataset.i); });
+    attrNodes.forEach(function (el) {
+      el.dataset.ia.split(';').forEach(function (pair) {
+        var p = pair.split(':');
+        el.setAttribute(p[0], plain(tr(l, p[1])));
+      });
+    });
+    document.querySelectorAll('img[data-l]').forEach(function (img) {
+      var base = 'img/shots/' + img.dataset.l + '-' + l;
+      var full = base + '-1280.webp';
+      if (img.hasAttribute('srcset')) {
+        img.srcset = base + '-640.webp 640w, ' + full + ' 1280w';
+        img.src = base + '-640.webp';
+      } else img.src = full;
+      if (img.parentNode.dataset.full) img.parentNode.dataset.full = full;
+    });
+    document.querySelectorAll('.store.as img').forEach(function (i) { i.src = 'img/badges/appstore-' + m.badge + '.svg'; i.alt = m.as; });
+    document.querySelectorAll('.store.gp img').forEach(function (i) { i.src = 'img/badges/googleplay-' + l + '.png'; i.alt = m.gp; });
+    document.querySelectorAll('.store.gp').forEach(function (a) { a.href = PLAY + '&hl=' + l; });
+    // the policy pages have Uzbek and English sections
+    document.querySelectorAll('a.doc-link').forEach(function (a) { a.hash = l === 'uz' ? 'uz' : 'en'; });
+    document.querySelectorAll('[data-lang]').forEach(function (a) {
+      a.classList.toggle('on', a.dataset.lang === l);
+      a.setAttribute('aria-current', a.dataset.lang === l ? 'true' : 'false');
+    });
+  }
+  document.querySelectorAll('[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      apply(a.dataset.lang);
+      try { localStorage.setItem('tt_lang', lang); } catch (x) { }
+      try { history.replaceState(null, '', '?lang=' + lang + location.hash.replace(/^#(uz|ru|en)$/, '')); } catch (x) { }
+    });
+  });
+  apply(pickLang());
+
+  // Android / iPhone visitors see their own store first
+  var ua = navigator.userAgent || '';
+  var android = /Android/i.test(ua);
+  if (android) document.querySelectorAll('.stores').forEach(function (s) { s.insertBefore(s.querySelector('.gp'), s.firstChild); });
+
+  // App Store: until Apple publishes the app, the badge says "coming soon" instead of opening an empty page
+  function appStoreSoon() {
+    document.querySelectorAll('.store.as').forEach(function (a) {
+      a.classList.add('is-soon');
+      a.setAttribute('aria-disabled', 'true');
+      a.addEventListener('click', function (e) { if (a.classList.contains('is-soon')) e.preventDefault(); });
+    });
+  }
+  window.ttAppStore = function (r) { if (r && r.resultCount === 0) appStoreSoon(); };
+  var s = document.createElement('script');
+  s.src = 'https://itunes.apple.com/lookup?id=' + APP_ID + '&callback=ttAppStore';
+  s.async = true;
+  document.head.appendChild(s);
+
+  // Screenshot viewer
+  var dlg = document.getElementById('lightbox');
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.gallery button'));
+  var cur = 0;
+  function show(i) {
+    cur = (i + btns.length) % btns.length;
+    var b = btns[cur];
+    var cap = b.parentNode.querySelector('figcaption').textContent;
+    document.getElementById('lb-img').src = b.dataset.full;
+    document.getElementById('lb-img').alt = cap;
+    document.getElementById('lb-cap').textContent = cap;
+  }
+  if (dlg && typeof dlg.showModal === 'function') {
+    btns.forEach(function (b, i) { b.addEventListener('click', function () { show(i); dlg.showModal(); }); });
+    document.getElementById('lb-prev').addEventListener('click', function () { show(cur - 1); });
+    document.getElementById('lb-next').addEventListener('click', function () { show(cur + 1); });
+    document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') show(cur - 1);
+      if (e.key === 'ArrowRight') show(cur + 1);
+    });
+  } else {
+    btns.forEach(function (b) { b.addEventListener('click', function () { window.open(b.dataset.full, '_blank'); }); });
+  }
+})();
+</script>
 </body>
 </html>

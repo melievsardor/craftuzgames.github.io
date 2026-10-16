@@ -453,7 +453,7 @@
       q6: 'Экзамен на права как настоящий?',
       a6: 'Теория – 973 вопроса по действующим ПДД Узбекистана, затем практика и экзамен на автодроме. Это игра: она помогает повторить правила, но не заменяет официальный экзамен.',
       q7: 'Как удалить аккаунт и данные?',
-      a7: 'В самой игре или по инструкции на странице <a href="delete-data.html#en">«Удаление аккаунта»</a>.',
+      a7: 'В самой игре или по инструкции на странице <a href="delete-data.html#ru">«Удаление аккаунта»</a>.',
       q8: 'Есть идея или нашли ошибку?',
       a8: 'Напишите на <a href="mailto:sardoormeliev@gmail.com">sardoormeliev@gmail.com</a> – укажите версию игры и модель телефона.',
       cta_title: 'Ташкент ждёт вас',
@@ -592,8 +592,8 @@
     document.querySelectorAll('.store.as img').forEach(function (i) { i.src = 'img/badges/appstore-' + m.badge + '.svg'; i.alt = m.as; });
     document.querySelectorAll('.store.gp img').forEach(function (i) { i.src = 'img/badges/googleplay-' + l + '.png'; i.alt = m.gp; });
     document.querySelectorAll('.store.gp').forEach(function (a) { a.href = PLAY + '&hl=' + l; });
-    // the policy pages have Uzbek and English sections
-    document.querySelectorAll('a.doc-link').forEach(function (a) { a.hash = l === 'uz' ? 'uz' : 'en'; });
+    // the policy pages have Uzbek, Russian and English sections (#uz, #ru, #en)
+    document.querySelectorAll('a.doc-link').forEach(function (a) { a.hash = l; });
     document.querySelectorAll('[data-lang]').forEach(function (a) {
       a.classList.toggle('on', a.dataset.lang === l);
       a.setAttribute('aria-current', a.dataset.lang === l ? 'true' : 'false');

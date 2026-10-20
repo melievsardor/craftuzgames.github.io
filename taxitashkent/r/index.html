@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taxi Tashkent – do‘stingiz taklifi</title>
+<meta name="description" content="Do‘stingiz sizni Taxi Tashkent o‘yiniga taklif qildi: o‘rnating va sovg‘a oling.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e1a3a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CraftUz">
+<meta property="og:title" content="Taxi Tashkent – men bilan taksi haydang!">
+<meta property="og:description" content="O‘yinni havola orqali o‘rnating – sovg‘a olasiz. Установите игру по ссылке – получите подарок.">
+<meta property="og:image" content="https://melievsardor.github.io/craftuzgames.github.io/taxitashkent/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.png">
+<link rel="apple-touch-icon" href="../img/icon.png">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../taxitashkent.css">
+<style>
+  /* Invite page: https://.../taxitashkent/r/?d=<Haydovchi ID>. Android: Google Play with the invite in the install
+     referrer (the game accepts it by itself at the first start); iPhone: the App Store + the code to type in PROMOKOD;
+     an installed game opens with taxitashkent://ref/<ID>. Store rules: this page links to the stores only - never to a
+     shop, a payment or the Telegram bot (Google Play payments policy section 4, App Store 3.1.1(a)). */
+  body { background: linear-gradient(165deg, #1e3070 0%, #0b1330 100%) fixed; min-height: 100vh; }
+  .inv { max-width: 520px; margin: 0 auto; padding: 28px 16px 40px; color: #fff; text-align: center; }
+  .inv .app-icon { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 12px 26px rgba(0, 0, 0, .45); }
+  .inv h1 { margin: 14px 0 4px; font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1.15; }
+  .inv .lead { margin: 0 0 18px; opacity: .9; }
+  .gift { margin: 0 auto 16px; padding: 14px 16px; border-radius: 18px; background: rgba(52, 211, 120, .14); border: 1px solid rgba(52, 211, 120, .45); }
+  .code {
+    margin: 0 auto 14px; padding: 14px 12px; border-radius: 20px; background: rgba(255, 255, 255, .08);
+    border: 2px dashed rgba(253, 198, 26, .7); font: 800 clamp(1.6rem, 8vw, 2.4rem)/1.1 "Segoe UI", Roboto, Arial, sans-serif;
+    letter-spacing: .08em; color: var(--gold); word-break: break-all;
+  }
+  .code small { display: block; font: 600 .8rem/1.4 "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: 0; color: #fff; opacity: .7; margin-bottom: 4px; }
+  .row { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+  .inv .btn { display: block; font-size: 1.1rem; text-align: center; }
+  .btn.ghost { background: rgba(255, 255, 255, .12); color: #fff; box-shadow: none; border: 1px solid rgba(255, 255, 255, .25); }
+  .btn.ghost:active { transform: translateY(2px); }
+  .steps { margin-top: 22px; padding: 18px; border-radius: 20px; background: rgba(255, 255, 255, .07); text-align: left; }
+  .steps h2 { margin: 0 0 8px; font-size: 1.1rem; color: var(--gold); }
+  .steps ol { margin: 0; padding-left: 22px; }
+  .steps li { margin: 4px 0; }
+  .hint { margin: 16px 0 0; font-size: .9rem; opacity: .75; }
+  .langs { margin: 22px 0 0; font-size: .9rem; }
+  .langs a { color: #fff; opacity: .7; margin: 0 8px; }
+  .langs a.on { opacity: 1; font-weight: 700; }
+  .bad { color: #ffb3a8; font-weight: 700; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main class="inv">
+  <img class="app-icon" src="../img/icon.png" alt="Taxi Tashkent" width="96" height="96">
+  <h1 data-t="title">Do‘stingiz sizni Taxi Tashkent’ga taklif qildi!</h1>
+  <p class="lead" data-t="lead">Toshkent ko‘chalarida taksi haydang, buyurtmalar bajaring, mashinangizni tuning qiling.</p>
+  <div class="gift" data-t="gift">🎁 O‘yinga taklif bilan kirsangiz – darhol sovg‘a: pul va 3 ta Skip.</div>
+
+  <div id="ok" hidden>
+    <div class="code"><small data-t="code_label">Taklif kodi</small><span id="code"></span></div>
+    <div class="row">
+      <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.craftuz.taxitashkent"><span data-t="play">Google Play’dan o‘rnatish</span></a>
+      <a class="btn" id="appstore" href="https://apps.apple.com/app/id6822778737" hidden><span data-t="appstore">App Store’dan o‘rnatish</span></a>
+      <a class="btn ghost" id="open" href="#"><span data-t="open">O‘yin o‘rnatilgan – o‘yinda ochish</span></a>
+      <button class="btn ghost" id="copy" type="button" data-t="copy">Kodni nusxalash</button>
+    </div>
+    <section class="steps">
+      <h2 data-t="how">Qanday ishlaydi</h2>
+      <ol>
+        <li data-t="step1">O‘yinni yuqoridagi tugma orqali o‘rnating.</li>
+        <li id="step2" data-t="step2a">Android: taklif o‘zi qabul qilinadi – o‘yinni ochsangiz, sovg‘a keladi.</li>
+        <li data-t="step3">Sovg‘a kelmasa: o‘yinda PROMOKOD tugmasini bosing va kodni yozing (u nusxalangan).</li>
+      </ol>
+    </section>
+  </div>
+  <p class="bad" id="bad" hidden data-t="bad">Havolada taklif kodi yo‘q yoki u noto‘g‘ri.</p>
+
+  <p class="hint" id="hint" data-t="hint">Tugma ishlamasa, sahifani brauzerda oching (⋮ → «Brauzerda ochish»).</p>
+  <p class="langs"><a href="#" data-lang="uz">O‘zbekcha</a> <a href="#" data-lang="ru">Русский</a> <a href="#" data-lang="en">English</a></p>
+  <noscript><p class="hint">JavaScript o‘chiq: o‘yinni Google Play yoki App Store’dan o‘rnating va havoladagi kodni PROMOKOD oynasiga yozing.</p></noscript>
+</main>
+
+<script>
+(function () {
+  var PKG = 'com.craftuz.taxitashkent';
+  var T = {
+    uz: {
+      title: 'Do‘stingiz sizni Taxi Tashkent’ga taklif qildi!', lead: 'Toshkent ko‘chalarida taksi haydang, buyurtmalar bajaring, mashinangizni tuning qiling.',
+      gift: '🎁 O‘yinga taklif bilan kirsangiz – darhol sovg‘a: pul va 3 ta Skip.', code_label: 'Taklif kodi',
+      play: 'Google Play’dan o‘rnatish', appstore: 'App Store’dan o‘rnatish', open: 'O‘yin o‘rnatilgan – o‘yinda ochish',
+      copy: 'Kodni nusxalash', copied: 'Nusxalandi ✓', how: 'Qanday ishlaydi', step1: 'O‘yinni yuqoridagi tugma orqali o‘rnating.',
+      step2a: 'Android: taklif o‘zi qabul qilinadi – o‘yinni ochsangiz, sovg‘a keladi.',
+      step2i: 'iPhone: o‘yinni oching, PROMOKOD tugmasini bosing va kodni qo‘ying (u nusxalangan).',
+      step3: 'Sovg‘a kelmasa: o‘yinda PROMOKOD tugmasini bosing va kodni yozing (u nusxalangan).',
+      bad: 'Havolada taklif kodi yo‘q yoki u noto‘g‘ri.', hint: 'Tugma ishlamasa, sahifani brauzerda oching (⋮ → «Brauzerda ochish»).'
+    },
+    ru: {
+      title: 'Друг приглашает вас в Taxi Tashkent!', lead: 'Возите пассажиров по улицам Ташкента, выполняйте заказы, тюнингуйте машину.',
+      gift: '🎁 Пришли по приглашению – сразу подарок: деньги и 3 Skip.', code_label: 'Код приглашения',
+      play: 'Установить из Google Play', appstore: 'Установить из App Store', open: 'Игра уже стоит – открыть в игре',
+      copy: 'Скопировать код', copied: 'Скопировано ✓', how: 'Как это работает', step1: 'Установите игру кнопкой выше.',
+      step2a: 'Android: приглашение примется само – откройте игру, и подарок придёт.',
+      step2i: 'iPhone: откройте игру, нажмите ПРОМОКОД и вставьте код (он уже скопирован).',
+      step3: 'Если подарок не пришёл: в игре нажмите ПРОМОКОД и введите код (он скопирован).',
+      bad: 'В ссылке нет кода приглашения или он неверный.', hint: 'Если кнопка не сработала, откройте страницу в браузере (⋮ → «Открыть в браузере»).'
+    },
+    en: {
+      title: 'A friend invites you to Taxi Tashkent!', lead: 'Drive a taxi through the streets of Tashkent, take orders, tune your car.',
+      gift: '🎁 Join with the invite and get a gift right away: money and 3 Skips.', code_label: 'Invite code',
+      play: 'Get it on Google Play', appstore: 'Download on the App Store', open: 'Already installed – open in the game',
+      copy: 'Copy the code', copied: 'Copied ✓', how: 'How it works', step1: 'Install the game with the button above.',
+      step2a: 'Android: the invite is accepted by itself – open the game and the gift arrives.',
+      step2i: 'iPhone: open the game, tap PROMO and paste the code (it is already copied).',
+      step3: 'No gift? Tap PROMO in the game and type the code (it is copied).',
+      bad: 'This link has no invite code, or the code is not valid.', hint: 'If the button does nothing, open this page in your browser (⋮ → “Open in browser”).'
+    }
+  };
+
+  // the game's Haydovchi ID: 8 symbols of the photo-safe alphabet (any case, dashes / spaces ignored)
+  function normalize(s) {
+    s = (s || '').toUpperCase().replace(/[\s\-_]/g, '');
+    return /^[ACDEFHJKMNPRTUVWXY3479]{8}$/.test(s) ? s : null;
+  }
+  var q = new URLSearchParams(location.search);
+  var id = normalize(q.get('d') || q.get('id') || decodeURIComponent((location.hash || '').replace(/^#/, '')));
+  var shown = id ? id.slice(0, 4) + '-' + id.slice(4) : '';
+  var ua = navigator.userAgent || '';
+  var android = /Android/i.test(ua);
+  var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var lang = (navigator.language || 'uz').slice(0, 2).toLowerCase();
+  try { lang = localStorage.getItem('tt_lang') || lang; } catch (e) { }
+  if (!T[lang]) lang = 'uz';
+
+  // Google Play with the invite in the install referrer (the game reads tt_ref once) + the campaign for the analytics
+  var play = 'https://play.google.com/store/apps/details?id=' + PKG + (id ? '&referrer=' +
+    encodeURIComponent('utm_source=invite&utm_medium=link&utm_campaign=ref_' + id + '&tt_ref=' + id) : '');
+  var scheme = id ? 'taxitashkent://ref/' + id : '';
+  var intent = id ? 'intent://ref/' + id + '#Intent;scheme=taxitashkent;package=' + PKG + ';S.browser_fallback_url=' + encodeURIComponent(play) + ';end' : '';
+
+  function apply() {
+    document.documentElement.lang = lang;
+    var t = T[lang];
+    document.querySelectorAll('[data-t]').forEach(function (el) { if (t[el.dataset.t]) el.textContent = t[el.dataset.t]; });
+    document.getElementById('step2').textContent = ios ? t.step2i : t.step2a;
+    document.querySelectorAll('[data-lang]').forEach(function (a) { a.classList.toggle('on', a.dataset.lang === lang); });
+    document.title = t.title;
+  }
+  document.querySelectorAll('[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      lang = a.dataset.lang;
+      try { localStorage.setItem('tt_lang', lang); } catch (x) { }
+      apply();
+    });
+  });
+
+  function copy() {
+    if (!id) return;
+    var done = function () { document.getElementById('copy').textContent = T[lang].copied; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(shown).then(done, function () { });
+    else {
+      var ta = document.createElement('textarea');
+      ta.value = shown; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) { }
+      ta.remove();
+    }
+  }
+
+  if (!id) {
+    document.getElementById('bad').hidden = false;
+    document.getElementById('hint').hidden = true;
+  } else {
+    document.getElementById('ok').hidden = false;
+    document.getElementById('code').textContent = shown;
+    document.getElementById('play').href = play;
+    document.getElementById('play').addEventListener('click', copy);
+    document.getElementById('appstore').addEventListener('click', copy);
+    document.getElementById('copy').addEventListener('click', copy);
+    var open = document.getElementById('open');
+    open.href = android ? intent : scheme;
+    open.addEventListener('click', copy);
+    if (ios) { document.getElementById('appstore').hidden = false; document.getElementById('play').hidden = true; }
+    if (!android && !ios) { document.getElementById('appstore').hidden = false; document.getElementById('open').hidden = true; }
+  }
+  apply();
+})();
+</script>
+</body>
+</html>
